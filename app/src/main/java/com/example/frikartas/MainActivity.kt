@@ -19,7 +19,9 @@ import com.example.frikartas.ui.screens.MainScreen
 import com.example.frikartas.ui.screens.OnePieceDetailScreen
 import com.example.frikartas.ui.screens.OnePieceListScreen
 import com.example.frikartas.ui.theme.FrikartasTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,18 +47,18 @@ fun FrikartasNavigation() {
             MainScreen(onNavigate = { navController.navigate(it) })
         }
         composable("kimetsuNoYaibaList") {
-            KimetsuNoYaibaListScreen(onNavigate = { navController.navigate(it) })
+            KimetsuNoYaibaListScreen(navController)
+        }
+        composable("kimetsuNoYaibaDetail/{cardName}") { backStackEntry ->
+            val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
+            KimetsuNoYaibaDetailScreen(navController, cardName)
         }
         composable("onePieceList") {
-            OnePieceListScreen(onNavigate = { navController.navigate(it) })
+            OnePieceListScreen(navController)
         }
-        composable("kimetsuNoYaibaDetail") {
-            // Puedes pasar argumentos si lo necesitas
-            KimetsuNoYaibaDetailScreen(onNavigate = { navController.navigate(it) })
-        }
-        composable("onePieceDetail") {
-            // Puedes pasar argumentos si lo necesitas
-            OnePieceDetailScreen(onNavigate = { navController.navigate(it) })
+        composable("onePieceDetail/{cardName}") { backStackEntry ->
+            val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
+            OnePieceDetailScreen(navController, cardName)
         }
     }
 }
