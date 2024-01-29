@@ -7,11 +7,16 @@ import com.example.frikartas.domain.models.KimetsuNoYaibaCollection
 
 fun mapKimetsuNoYaibaCardDTOToCard(kimetsuNoYaibaCardDTO: KimetsuNoYaibaCardDTO) = KimetsuNoYaibaCard(
     name = kimetsuNoYaibaCardDTO.name,
-    urlImg = kimetsuNoYaibaCardDTO.urlImg,
+    //de momento no lo necesito -> tags = onePieceCardDTO.tags,
     rarity = kimetsuNoYaibaCardDTO.rarity,
     stock = kimetsuNoYaibaCardDTO.stock,
-    precio = kimetsuNoYaibaCardDTO.precio,
+    price = kimetsuNoYaibaCardDTO.price,
     discount = kimetsuNoYaibaCardDTO.discount,
+    SKU = kimetsuNoYaibaCardDTO.SKU,
+    urlImages = kimetsuNoYaibaCardDTO.urlImages
+    //de momento no lo necesito -> description = onePieceCardDTO.description,
+    //de momento no lo necesito -> languages = onePieceCardDTO.languages.map { it.displayName },
+    //de momento no lo necesito -> size = onePieceCardDTO.size,
 )
 
 fun mapKimetsuNoYaibaCollectionDTOToCollection(kimetsuNoYaibaCollectionDTO: KimetsuNoYaibaCollectionDTO) = KimetsuNoYaibaCollection(
