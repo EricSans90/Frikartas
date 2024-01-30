@@ -16,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.frikartas.ui.screens.KimetsuNoYaibaDetailScreen
 import com.example.frikartas.ui.screens.KimetsuNoYaibaListScreen
 import com.example.frikartas.ui.screens.MainScreen
+import com.example.frikartas.ui.screens.OnePieceCollectionDetailScreen
 import com.example.frikartas.ui.screens.OnePieceDetailScreen
 import com.example.frikartas.ui.screens.OnePieceListScreen
 import com.example.frikartas.ui.theme.FrikartasTheme
@@ -46,19 +47,24 @@ fun FrikartasNavigation() {
         composable("mainScreen") {
             MainScreen(onNavigate = { navController.navigate(it) })
         }
+        composable("onePieceList") {
+            OnePieceListScreen(navController)
+        }
+        composable("onePieceDetail/{collectionName}/{cardName}") { backStackEntry ->
+            val collectionName = backStackEntry.arguments?.getString("collectionName") ?: ""
+            val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
+            OnePieceDetailScreen(navController, collectionName, cardName)
+        }
+        composable("onePieceCollectionDetail/{collectionName}") { backStackEntry ->
+            val collectionName = backStackEntry.arguments?.getString("collectionName") ?: ""
+            OnePieceCollectionDetailScreen(navController, collectionName)
+        }
         composable("kimetsuNoYaibaList") {
             KimetsuNoYaibaListScreen(navController)
         }
         composable("kimetsuNoYaibaDetail/{cardName}") { backStackEntry ->
             val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
             KimetsuNoYaibaDetailScreen(navController, cardName)
-        }
-        composable("onePieceList") {
-            OnePieceListScreen(navController)
-        }
-        composable("onePieceDetail/{cardName}") { backStackEntry ->
-            val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
-            OnePieceDetailScreen(navController, cardName)
         }
     }
 }

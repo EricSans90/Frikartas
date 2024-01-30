@@ -12,22 +12,19 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.frikartas.ui.viewmodels.OnePieceViewModel
 import androidx.compose.runtime.livedata.observeAsState
+import com.example.frikartas.ui.components.OnePieceCollectionListItem
 import com.example.frikartas.ui.components.OnePieceListItem
 
 @Composable
 fun OnePieceListScreen(navController: NavController, viewModel: OnePieceViewModel = hiltViewModel()) {
-    val onePieceCards by viewModel.cards.observeAsState(initial = listOf())
+    val onePieceCollections by viewModel.collections.observeAsState(initial = listOf())
 
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
-    ) {
-        items(onePieceCards) { card ->
-            OnePieceListItem(
-                onePieceCard = card,
+    LazyColumn {
+        items(onePieceCollections) { collection ->
+            OnePieceCollectionListItem(
+                onePieceCollection = collection,
                 onItemClick = {
-                    navController.navigate("onePieceDetail/${card.name}")
+                    navController.navigate("onePieceCollectionDetail/${collection.name}")
                 }
             )
         }

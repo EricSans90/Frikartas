@@ -14,8 +14,9 @@ fun MainScreen(onNavigate: (String)-> Unit){
             Text("Ver lista de KNY")
         }
 
-        Button(onClick = {onNavigate("onePieceList")}){
-            Text("Ver lista de OP")
+        Text("Bienvenido a Frikartas")
+        Button(onClick = { onNavigate("onePieceList") }) {
+            Text("Ver lista de colecciones de One Piece")
         }
     }
 }
