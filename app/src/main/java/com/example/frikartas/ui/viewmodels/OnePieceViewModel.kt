@@ -7,6 +7,8 @@ import com.example.frikartas.domain.models.OnePieceCard
 import com.example.frikartas.domain.models.OnePieceCollection
 import com.example.frikartas.domain.repositories.OnePieceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -32,5 +34,14 @@ class OnePieceViewModel @Inject constructor(private val repository: OnePieceRepo
     fun getCardFromCollection(collectionName: String, cardName: String): OnePieceCard? {
         val collection = collections.value?.find { it.name.trim().toLowerCase() == collectionName.trim().toLowerCase() }
         return collection?.cards?.find { it.name.trim().toLowerCase() == cardName.trim().toLowerCase() }
+    }
+
+    private val _navigationEvents = MutableSharedFlow<String>()
+    val navigationEvents = _navigationEvents.asSharedFlow()
+
+    fun onCollectionSelected(collectionName: String) {
+        viewModelScope.launch {
+            _navigationEvents.emit("onePieceCollectionDetail/$collectionName")
+        }
     }
 }
