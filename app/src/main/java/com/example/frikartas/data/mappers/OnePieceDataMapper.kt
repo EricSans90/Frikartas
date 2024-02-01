@@ -7,16 +7,16 @@ import com.example.frikartas.domain.models.OnePieceCollection
 
 fun mapOnePieceCardDTOToCard(onePieceCardDTO: OnePieceCardDTO) = OnePieceCard(
     name = onePieceCardDTO.name,
-    //de momento no lo necesito -> tags = onePieceCardDTO.tags,
+    tags = onePieceCardDTO.tags,
     rarity = onePieceCardDTO.rarity,
     stock = onePieceCardDTO.stock,
     price = onePieceCardDTO.price,
     discount = onePieceCardDTO.discount,
     SKU = onePieceCardDTO.SKU,
-    urlImages = onePieceCardDTO.urlImages
-    //de momento no lo necesito -> description = onePieceCardDTO.description,
-    //de momento no lo necesito -> languages = onePieceCardDTO.languages.map { it.displayName },
-    //de momento no lo necesito -> size = onePieceCardDTO.size,
+    urlImages = onePieceCardDTO.urlImages,
+    description = onePieceCardDTO.description,
+    languages = onePieceCardDTO.languages,
+    size = onePieceCardDTO.size
 )
 
 fun mapOnePieceCollectionDTOToCollection(onePieceCollectionDTO: OnePieceCollectionDTO) = OnePieceCollection(
