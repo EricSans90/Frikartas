@@ -47,6 +47,16 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes +="META-INF/DEPENDENCIES"
+            excludes +="META-INF/LICENSE.md"
+            excludes +="META-INF/LICENSE.txt"
+            excludes +="META-INF/license.txt"
+            excludes +="META-INF/NOTICE.md"
+            excludes +="META-INF/NOTICE.txt"
+            excludes +="META-INF/notice.txt"
+            excludes +="META-INF/ASL2.0"
+            excludes +="META-INF/*.kotlin_module"
+            excludes +="META-INF/INDEX.LIST"
         }
     }
     sourceSets {
@@ -56,6 +66,8 @@ android {
             }
         }
     }
+
+
 }
 
 val hiltVersion = "2.48.1"
@@ -70,6 +82,10 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.3.2")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    // Hibernate
+    implementation("org.hibernate:hibernate-core:6.2.0.Final")
+    // Driver JDBC MySQL
+    implementation ("mysql:mysql-connector-java:8.0.33")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
