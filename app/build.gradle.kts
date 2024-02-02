@@ -82,10 +82,16 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.3.2")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
-    // Hibernate
-    implementation("org.hibernate:hibernate-core:6.2.0.Final")
+    // INTENTO de Hibernate, parece que no funciona bien en Android Studio
+    //implementation("org.hibernate.orm:hibernate-core:6.4.2.Final")
     // Driver JDBC MySQL
-    implementation ("mysql:mysql-connector-java:8.0.33")
+    //implementation ("mysql:mysql-connector-java:8.0.33")
+    // JNDI
+    //implementation ("javax.naming:jndi:1.2.1")
+    // Dependencia Java EE API que incluye JNDI
+    //implementation("javax:javaee-api:8.0.1")
+    // Jakarta EE API
+    //implementation ("jakarta.platform:jakarta.jakartaee-api:8.0.0")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
