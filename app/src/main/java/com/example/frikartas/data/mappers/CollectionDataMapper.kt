@@ -5,6 +5,7 @@ import com.example.frikartas.domain.models.Collection
 
 fun mapCollectionDTOToCollection(collectionDTO: CollectionDTO): Collection {
     val collection = Collection(
+        collectionId = collectionDTO.collectionId,
         collectType = collectionDTO.collectType,
         name = collectionDTO.name,
         publicationYear = collectionDTO.publicationYear,

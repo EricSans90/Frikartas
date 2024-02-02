@@ -1,10 +1,12 @@
 [
   {
+    "collectionId": 1,
     "collectType": "ONEPIECE",
     "name": "Colección Wanted",
     "publicationYear": 2020,
     "cards": [
       {
+        "cardId": 1,
         "name": "OP01-001 Luffy",
         "tags": [
           "D.",
@@ -30,6 +32,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 2,
         "name": "OP01-002 Ace",
         "tags": [
           "Ace",
@@ -54,6 +57,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 3,
         "name": "OP01-003 Sabo",
         "tags": [
           "Sabo",
@@ -77,6 +81,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 4,
         "name": "OP01-004 Edward Newgate",
         "tags": [
           "D.",
@@ -102,6 +107,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 5,
         "name": "OP01-006 Aokiji",
         "tags": [
           "Aokiji",
@@ -125,6 +131,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 6,
         "name": "OP01-007 Kizaru",
         "tags": [
           "Kizaru",
@@ -148,6 +155,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 7,
         "name": "OP01-009 Luffy",
         "tags": [
           "D.",
@@ -172,6 +180,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 8,
         "name": "OP01-010 Zoro",
         "tags": [
           "Zoro",
@@ -194,6 +203,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 9,
         "name": "OP01-011 Nami",
         "tags": [
           "Nami",
@@ -217,6 +227,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 10,
         "name": "OP01-012 Usopp",
         "tags": [
           "Usopp",
@@ -239,6 +250,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 11,
         "name": "OP01-013 Sanji",
         "tags": [
           "Sanji",
@@ -261,6 +273,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 12,
         "name": "OP01-014 Chopper",
         "tags": [
           "Chopper",
@@ -283,6 +296,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 13,
         "name": "OP01-015 Robin",
         "tags": [
           "Robin",
@@ -306,6 +320,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 14,
         "name": "OP01-016 Franky",
         "tags": [
           "Franky",
@@ -328,6 +343,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 15,
         "name": "OP01-017 Brook",
         "tags": [
           "Brook",
@@ -350,6 +366,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 16,
         "name": "OP01-018 Jinbe",
         "tags": [
           "Jinbe",
@@ -374,11 +391,13 @@
     ]
   },
   {
+    "collectionId": 2,
     "collectType": "ONEPIECE",
     "name": "Colección Wanted2 Test",
     "publicationYear": 2020,
     "cards": [
       {
+        "cardId": 17,
         "name": "OP-1M-001 Ace",
         "tags": [
           "Ace",
@@ -401,6 +420,7 @@
         "size": "6.3x8.8 cm"
       },
       {
+        "cardId": 18,
         "name": "OP-1M-003 Garp",
         "tags": [
           "D.",

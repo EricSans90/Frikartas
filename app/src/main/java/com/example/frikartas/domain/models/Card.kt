@@ -4,6 +4,7 @@ import com.example.frikartas.data.models.LanguageDTO
 
 
 data class Card (
+    val cardId: Int,
     val name: String,
     val tags: List<String>,
     val rarity: String,

@@ -6,6 +6,7 @@ import com.example.frikartas.domain.models.Card
 import com.example.frikartas.domain.models.Collection
 
 fun mapCardDTOToCard(cardDTO: CardDTO, collection: Collection) = Card(
+    cardId = cardDTO.cardId,
     name = cardDTO.name,
     tags = cardDTO.tags,
     rarity = cardDTO.rarity,
