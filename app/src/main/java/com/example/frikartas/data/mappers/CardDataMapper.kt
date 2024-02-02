@@ -19,17 +19,3 @@ fun mapCardDTOToCard(cardDTO: CardDTO, collection: Collection) = Card(
     size = cardDTO.size,
     collection = collection
 )
-
-fun mapCollectionDTOToCollection(collectionDTO: CollectionDTO): Collection {
-    val collection = Collection(
-        name = collectionDTO.name,
-        publicationYear = collectionDTO.publicationYear,
-        cards = mutableListOf() // Inicializa con una lista vacía, se llena luego
-    )
-
-    collection.cards = collectionDTO.cards.map {
-        mapCardDTOToCard(it, collection)
-    }
-
-    return collection
-}

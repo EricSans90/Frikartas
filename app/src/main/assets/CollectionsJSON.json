@@ -1,36 +1,110 @@
 [
   {
-    "Collect": "OnePiece",
+    "collectType": "ONEPIECE",
     "name": "Colección Wanted",
     "publicationYear": 2020,
     "cards": [
       {
-        "name": "OP-1M-001 Ace",
+        "name": "OP01-001 Luffy",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Mugiwara",
+          "Wanted"
+        ],
+        "rarity": "PTR",
+        "stock": 1,
+        "price": 60,
+        "discount": true,
+        "SKU": "OP-Wan-OP01-PTR-001",
+        "urlImages": [
+          "https://drive.google.com/file/d/1JdCDqwZNbpx_FB19ZuiJpsg3sy0wvv1N/view?usp=drive_link",
+          "https://drive.google.com/file/d/1eBNDMOg3v5w0J-c18S8S-ajgxrYC_z2j/view?usp=drive_link"
+        ],
+        "description": "Carta de X",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "name": "OP01-002 Ace",
         "tags": [
           "Ace",
           "D.",
           "Shirohige Kaizokudan",
           "Wanted"
         ],
-        "rarity": "HR",
-        "stock": 2,
-        "price": 40,
+        "rarity": "PTR",
+        "stock": 1,
+        "price": 60,
         "discount": true,
-        "SKU": "OP-Wan-OP1M-HR-001",
+        "SKU": "OP-Wan-OP01-PTR-002",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_023216.jpg"
+          "https://drive.google.com/file/d/1V285beffEYDXnx2DmVDVAjUZsCzJsj27/view?usp=drive_link",
+          "https://drive.google.com/file/d/16Hzrlw051yu0tydnLm7GdNoR_wUhYoFr/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
-          "CHINESE"
+          "CHINESE",
+          "ENGLISH"
         ],
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-003 Garp",
+        "name": "OP01-003 Sabo",
+        "tags": [
+          "Sabo",
+          "Revolutionary Army",
+          "Wanted"
+        ],
+        "rarity": "PTR",
+        "stock": 1,
+        "price": 60,
+        "discount": true,
+        "SKU": "OP-Wan-OP01-PTR-003",
+        "urlImages": [
+          "https://drive.google.com/file/d/1F3OWxq6yElIglJL-0BB9qXvHkWuQXr29/view?usp=drive_link",
+          "https://drive.google.com/file/d/1W-kSQv7OW0Ag2LMS3Xak9R0orQaN-3UD/view?usp=drive_link"
+        ],
+        "description": "Carta de X",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "name": "OP01-004 Edward Newgate",
         "tags": [
           "D.",
-          "Garp",
+          "Luffy",
+          "Yonkou",
+          "Mugiwara",
+          "Wanted"
+        ],
+        "rarity": "PTR",
+        "stock": 1,
+        "price": 80,
+        "discount": false,
+        "SKU": "OP-Wan-OP01-PTR-004",
+        "urlImages": [
+          "https://drive.google.com/file/d/1icHnpzgk62_u6hOCX9WEbY3Xz6DXDNWK/view?usp=drive_link",
+          "https://drive.google.com/file/d/1JTvFp491zL2m0kDM_iJA5sHCIjAAYYzY/view?usp=drive_link"
+        ],
+        "description": "Carta de X",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "name": "OP01-006 Aokiji",
+        "tags": [
+          "Aokiji",
           "Marine",
           "Admiral",
           "Wanted"
@@ -38,10 +112,11 @@
         "rarity": "HR",
         "stock": 1,
         "price": 40,
-        "discount": true,
-        "SKU": "OP-Wan-OP1M-HR-003",
+        "discount": false,
+        "SKU": "OP-Wan-OP01-HR-006",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_023359.jpg"
+          "https://drive.google.com/file/d/1w795rodoopvbWZ7M7dfXc_8aAFMKUAB0/view?usp=drive_link",
+          "https://drive.google.com/file/d/1KxnE9Cm2ykek64VTQcS6kU3QN924blhv/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -50,20 +125,21 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-004 Sengoku",
+        "name": "OP01-007 Kizaru",
         "tags": [
-          "Sengoku",
+          "Kizaru",
           "Marine",
           "Admiral",
           "Wanted"
         ],
         "rarity": "HR",
-        "stock": 2,
+        "stock": 1,
         "price": 40,
-        "discount": true,
-        "SKU": "OP-Wan-OP1M-HR-004",
+        "discount": false,
+        "SKU": "OP-Wan-OP01-HR-007",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_023511.jpg"
+          "https://drive.google.com/file/d/1kJW4L8Wou7MG3H8zvGhETODJfxx69UWt/view?usp=drive_link",
+          "https://drive.google.com/file/d/1RqC6SKHrjcbWv3Q5075orT-3erHCOlhY/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -72,7 +148,7 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-005 Luffy",
+        "name": "OP01-009 Luffy",
         "tags": [
           "D.",
           "Luffy",
@@ -81,12 +157,13 @@
           "Wanted"
         ],
         "rarity": "SSR",
-        "stock": 3,
-        "price": 12.5,
-        "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-005",
+        "stock": 4,
+        "price": 10,
+        "discount": true,
+        "SKU": "OP-Wan-OP01-SSR-009",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025226.jpg"
+          "https://drive.google.com/file/d/1Xskh909E0BISCGowhjt80ao60amH-HAx/view?usp=drive_link",
+          "https://drive.google.com/file/d/1-P1zVbOOzXJy8GSkOqhzWZ9D8vbpjIwU/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -95,19 +172,20 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-006 Zoro",
+        "name": "OP01-010 Zoro",
         "tags": [
           "Zoro",
           "Mugiwara",
           "Wanted"
         ],
         "rarity": "SSR",
-        "stock": 2,
-        "price": 12.5,
+        "stock": 1,
+        "price": 20,
         "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-006",
+        "SKU": "OP-Wan-OP01-SSR-010",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025331.jpg"
+          "https://drive.google.com/file/d/1aftq0lb2JKc9cU0sxR2s4IXSDXcVhQLz/view?usp=drive_link",
+          "https://drive.google.com/file/d/11VcR8y9zhj7gBg2fYfWCE8gD835g82x1/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -116,7 +194,7 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-007 Nami",
+        "name": "OP01-011 Nami",
         "tags": [
           "Nami",
           "Waifu",
@@ -125,11 +203,12 @@
         ],
         "rarity": "SSR",
         "stock": 2,
-        "price": 12.5,
+        "price": 15,
         "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-007",
+        "SKU": "OP-Wan-OP01-SSR-011",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025438.jpg"
+          "https://drive.google.com/file/d/12g2efNIGvIjLJ03QFtZIBWu3K_sZSs3n/view?usp=drive_link",
+          "https://drive.google.com/file/d/1ljVEgVKKdefZMicShbLgN2GR7p5npwMd/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -138,19 +217,42 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-009 Sanji",
+        "name": "OP01-012 Usopp",
+        "tags": [
+          "Usopp",
+          "Mugiwara",
+          "Wanted"
+        ],
+        "rarity": "SSR",
+        "stock": 3,
+        "price": 7.5,
+        "discount": false,
+        "SKU": "OP-Wan-OP01-SSR-012",
+        "urlImages": [
+          "https://drive.google.com/file/d/1DRg4R26OOWpAaALF9eHCOGo1pF4LC6as/view?usp=drive_link",
+          "https://drive.google.com/file/d/1gOUF5SOT5ukrBZa83Eb_Lte_QSboD5-0/view?usp=drive_link"
+        ],
+        "description": "Carta de X",
+        "languages": [
+          "CHINESE"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "name": "OP01-013 Sanji",
         "tags": [
           "Sanji",
           "Mugiwara",
           "Wanted"
         ],
         "rarity": "SSR",
-        "stock": 2,
-        "price": 12.5,
+        "stock": 3,
+        "price": 7.5,
         "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-009",
+        "SKU": "OP-Wan-OP01-SSR-013",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025526.jpg"
+          "https://drive.google.com/file/d/1ghmqLuZcRlFHnda-zeXl5rK47WNhcYDo/view?usp=drive_link",
+          "https://drive.google.com/file/d/1kEaWsMKxT5lbR-xFdtfzo1Sf7EG4hwGW/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -159,7 +261,7 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-010 Chopper",
+        "name": "OP01-014 Chopper",
         "tags": [
           "Chopper",
           "Mugiwara",
@@ -167,11 +269,12 @@
         ],
         "rarity": "SSR",
         "stock": 2,
-        "price": 12.5,
+        "price": 10,
         "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-010",
+        "SKU": "OP-Wan-OP01-SSR-014",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025607.jpg"
+          "https://drive.google.com/file/d/1gCqCU8D5g3VjqhC-8S4pyo_IuouUpYDk/view?usp=drive_link",
+          "https://drive.google.com/file/d/1bTKSnK7vJG_NzIpfn-Ja4sg44rQoXWbV/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -180,7 +283,7 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-011 Robin",
+        "name": "OP01-015 Robin",
         "tags": [
           "Robin",
           "Waifu",
@@ -188,12 +291,13 @@
           "Wanted"
         ],
         "rarity": "SSR",
-        "stock": 1,
-        "price": 20,
+        "stock": 2,
+        "price": 15,
         "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-011",
+        "SKU": "OP-Wan-OP01-SSR-015",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025659.jpg"
+          "https://drive.google.com/file/d/1XBAYWi1kbSWd6AJCdM3MUdl7Qdrhius0/view?usp=drive_link",
+          "https://drive.google.com/file/d/1JJFraQPQ-umD9Z34iB-KJVGjzHBF3beC/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -202,19 +306,20 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-012 Franky",
+        "name": "OP01-016 Franky",
         "tags": [
           "Franky",
           "Mugiwara",
           "Wanted"
         ],
         "rarity": "SSR",
-        "stock": 0,
-        "price": 15,
+        "stock": 1,
+        "price": 20,
         "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-012",
+        "SKU": "OP-Wan-OP01-SSR-016",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025732.jpg"
+          "https://drive.google.com/file/d/1FWNzADdOwEvhBQc5aA9YLG-5Z3XnpfJ3/view?usp=drive_link",
+          "https://drive.google.com/file/d/1zd9x2X-t1yfnDTtvtcwx5esly5pHYBIk/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
@@ -223,32 +328,53 @@
         "size": "6.3x8.8 cm"
       },
       {
-        "name": "OP-1M-013 Brook",
+        "name": "OP01-017 Brook",
         "tags": [
           "Brook",
           "Mugiwara",
           "Wanted"
         ],
         "rarity": "SSR",
-        "stock": 0,
-        "price": 15,
+        "stock": 2,
+        "price": 10,
         "discount": false,
-        "SKU": "OP-Wan-OP1M-SSR-013",
+        "SKU": "OP-Wan-OP01-SSR-017",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025815.jpg",
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_025815.jpg"
+          "https://drive.google.com/file/d/15A_tkS2IicG4jXbXnFt8Ct1lt2tFFDhy/view?usp=drive_link",
+          "https://drive.google.com/file/d/1ZLDI7JsZQxQnQdR_3adURMVpZgEtGN3g/view?usp=drive_link"
         ],
         "description": "Carta de X",
         "languages": [
-          "CHINESE",
-          "ENGLISH"
+          "CHINESE"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "name": "OP01-018 Jinbe",
+        "tags": [
+          "Jinbe",
+          "Mugiwara",
+          "Wanted"
+        ],
+        "rarity": "SSR",
+        "stock": 7,
+        "price": 4,
+        "discount": false,
+        "SKU": "OP-Wan-OP01-SSR-018",
+        "urlImages": [
+          "https://drive.google.com/file/d/1x20nyz4E_HnYn06IZyJyGXgDQJH1hPgm/view?usp=drive_link",
+          "https://drive.google.com/file/d/1PweIzlILxShQdFvlKT7dkfK3WpURgRJ2/view?usp=drive_link"
+        ],
+        "description": "Carta de X",
+        "languages": [
+          "CHINESE"
         ],
         "size": "6.3x8.8 cm"
       }
     ]
   },
   {
-    "Collect": "OnePiece",
+    "collectType": "ONEPIECE",
     "name": "Colección Wanted2 Test",
     "publicationYear": 2020,
     "cards": [

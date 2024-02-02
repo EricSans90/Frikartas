@@ -1,11 +1,5 @@
 package com.example.frikartas.data.models
 
-data class CollectionDTO(
-    val name: String,
-    val publicationYear: Int,
-    val cards: List<CardDTO>
-)
-
 data class CardDTO(
     val name: String,
     val tags: List<String>,
