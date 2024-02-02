@@ -1,34 +1,34 @@
 package com.example.frikartas.data.mappers
 
-import com.example.frikartas.data.models.OnePieceCardDTO
-import com.example.frikartas.data.models.OnePieceCollectionDTO
+import com.example.frikartas.data.models.CardDTO
+import com.example.frikartas.data.models.CollectionDTO
 import com.example.frikartas.domain.models.Card
 import com.example.frikartas.domain.models.Collection
 
-fun mapOnePieceCardDTOToCard(onePieceCardDTO: OnePieceCardDTO, collection: Collection) = Card(
-    name = onePieceCardDTO.name,
-    tags = onePieceCardDTO.tags,
-    rarity = onePieceCardDTO.rarity,
-    stock = onePieceCardDTO.stock,
-    price = onePieceCardDTO.price,
-    discount = onePieceCardDTO.discount,
-    SKU = onePieceCardDTO.SKU,
-    urlImages = onePieceCardDTO.urlImages,
-    description = onePieceCardDTO.description,
-    languages = onePieceCardDTO.languages,
-    size = onePieceCardDTO.size,
+fun mapCardDTOToCard(cardDTO: CardDTO, collection: Collection) = Card(
+    name = cardDTO.name,
+    tags = cardDTO.tags,
+    rarity = cardDTO.rarity,
+    stock = cardDTO.stock,
+    price = cardDTO.price,
+    discount = cardDTO.discount,
+    SKU = cardDTO.SKU,
+    urlImages = cardDTO.urlImages,
+    description = cardDTO.description,
+    languages = cardDTO.languages,
+    size = cardDTO.size,
     collection = collection
 )
 
-fun mapOnePieceCollectionDTOToCollection(onePieceCollectionDTO: OnePieceCollectionDTO): Collection {
+fun mapCollectionDTOToCollection(collectionDTO: CollectionDTO): Collection {
     val collection = Collection(
-        name = onePieceCollectionDTO.name,
-        publicationYear = onePieceCollectionDTO.publicationYear,
+        name = collectionDTO.name,
+        publicationYear = collectionDTO.publicationYear,
         cards = mutableListOf() // Inicializa con una lista vacía, se llena luego
     )
 
-    collection.cards = onePieceCollectionDTO.cards.map {
-        mapOnePieceCardDTOToCard(it, collection)
+    collection.cards = collectionDTO.cards.map {
+        mapCardDTOToCard(it, collection)
     }
 
     return collection

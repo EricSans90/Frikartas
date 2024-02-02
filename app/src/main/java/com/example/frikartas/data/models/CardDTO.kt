@@ -1,12 +1,12 @@
 package com.example.frikartas.data.models
 
-data class OnePieceCollectionDTO(
+data class CollectionDTO(
     val name: String,
     val publicationYear: Int,
-    val cards: List<OnePieceCardDTO>
+    val cards: List<CardDTO>
 )
 
-data class OnePieceCardDTO(
+data class CardDTO(
     val name: String,
     val tags: List<String>,
     val rarity: String,

@@ -1,5 +1,6 @@
 [
   {
+    "Collect": "OnePiece",
     "name": "Colección Wanted",
     "publicationYear": 2020,
     "cards": [
@@ -247,6 +248,7 @@
     ]
   },
   {
+    "Collect": "OnePiece",
     "name": "Colección Wanted2 Test",
     "publicationYear": 2020,
     "cards": [
