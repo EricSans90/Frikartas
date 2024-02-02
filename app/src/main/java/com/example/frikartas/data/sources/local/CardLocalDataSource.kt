@@ -1,14 +1,14 @@
 package com.example.frikartas.data.sources.local
 
 import android.content.Context
-import com.example.frikartas.data.models.KimetsuNoYaibaCardDTO
+import com.example.frikartas.data.models.OnePieceCollectionDTO
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class KimetsuNoYaibaLocalDataSource(private val context: Context) {
-    fun getKimetsuNoYaibaCards(): List<KimetsuNoYaibaCardDTO>{
-        val jsonFileString = getJsonDataFromAsset(context, "KimetsuNoYaibaJSON.json")
-        val listType = object : TypeToken<List<KimetsuNoYaibaCardDTO>>() {}.type
+class CardLocalDataSource(private val context: Context) {
+    fun getOnePieceCollections(): List<OnePieceCollectionDTO> {
+        val jsonFileString = getJsonDataFromAsset(context, "OnePieceJSON.json")
+        val listType = object : TypeToken<List<OnePieceCollectionDTO>>() {}.type
         return Gson().fromJson(jsonFileString, listType)
     }
 

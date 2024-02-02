@@ -14,8 +14,8 @@
     <property name="show_sql">true</property>
 
     <!-- Mapeo de entidades -->
-    <mapping class="com.example.frikartas.domain.models.OnePieceCard"/>
-    <mapping class="com.example.frikartas.domain.models.OnePieceCollection"/>
+    <mapping class="com.example.frikartas.domain.models.Card"/>
+    <mapping class="com.example.frikartas.domain.models.Collection"/>
     <mapping class="com.example.frikartas.domain.models.KimetsuNoYaibaCard"/>
     <mapping class="com.example.frikartas.domain.models.KimetsuNoYaibaCollection"/>
 

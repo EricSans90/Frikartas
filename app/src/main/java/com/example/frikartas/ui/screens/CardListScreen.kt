@@ -7,12 +7,12 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.frikartas.ui.viewmodels.OnePieceViewModel
+import com.example.frikartas.ui.viewmodels.CardViewModel
 import androidx.compose.runtime.livedata.observeAsState
-import com.example.frikartas.ui.components.OnePieceCollectionListItem
+import com.example.frikartas.ui.components.CardCollectionListItem
 
 @Composable
-fun OnePieceListScreen(navController: NavController, viewModel: OnePieceViewModel = hiltViewModel()) {
+fun CardListScreen(navController: NavController, viewModel: CardViewModel = hiltViewModel()) {
     val onePieceCollections by viewModel.collections.observeAsState(initial = listOf())
 
     // Observar eventos de navegación del ViewModel
@@ -24,8 +24,8 @@ fun OnePieceListScreen(navController: NavController, viewModel: OnePieceViewMode
 
     LazyColumn {
         items(onePieceCollections) { collection ->
-            OnePieceCollectionListItem(
-                onePieceCollection = collection,
+            CardCollectionListItem(
+                collection = collection,
                 onItemClick = {
                     // Informar al ViewModel que se ha seleccionado una colección
                     viewModel.onCollectionSelected(collection.name)

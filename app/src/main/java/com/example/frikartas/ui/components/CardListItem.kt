@@ -3,7 +3,6 @@ package com.example.frikartas.ui.components
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -12,11 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.frikartas.domain.models.OnePieceCard
+import com.example.frikartas.domain.models.Card
 
 @Composable
-fun OnePieceListItem(
-    onePieceCard: OnePieceCard,
+fun CardListItem(
+    card: Card,
     onItemClick: () -> Unit
 ) {
     Card(
@@ -29,7 +28,7 @@ fun OnePieceListItem(
     ) {
 
         Column(){
-            Text(text = onePieceCard.name)
+            Text(text = card.name)
             // Falta editar la lista cómo saldrá
         }
     }

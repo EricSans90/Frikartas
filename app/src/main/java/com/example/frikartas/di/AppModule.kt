@@ -1,12 +1,9 @@
 package com.example.frikartas.di
 
 import android.content.Context
-import com.example.frikartas.data.repositories.KimetsuNoYaibaRepositoryImpl
-import com.example.frikartas.data.repositories.OnePieceRepositoryImpl
-import com.example.frikartas.data.sources.local.KimetsuNoYaibaLocalDataSource
-import com.example.frikartas.data.sources.local.OnePieceLocalDataSource
-import com.example.frikartas.domain.repositories.KimetsuNoYaibaRepository
-import com.example.frikartas.domain.repositories.OnePieceRepository
+import com.example.frikartas.data.repositories.CardRepositoryImpl
+import com.example.frikartas.data.sources.local.CardLocalDataSource
+import com.example.frikartas.domain.repositories.CardRepository
 import com.google.gson.Gson
 import dagger.Binds
 import dagger.Module
@@ -20,24 +17,14 @@ import dagger.hilt.components.SingletonComponent
 abstract class AppModule {
 
     @Binds
-    abstract fun bindOnePieceRepository(
-        onePieceRepositoryImpl: OnePieceRepositoryImpl
-    ): OnePieceRepository
-
-    @Binds
-    abstract fun bindKimetsuNoYaibaRepository(
-        kimetsuNoYaibaRepositoryImpl: KimetsuNoYaibaRepositoryImpl
-    ): KimetsuNoYaibaRepository
+    abstract fun bindCardRepository(
+        cardRepositoryImpl: CardRepositoryImpl
+    ): CardRepository
 
     companion object {
         @Provides
-        fun provideOnePieceLocalDataSource(@ApplicationContext context: Context): OnePieceLocalDataSource {
-            return OnePieceLocalDataSource(context)
-        }
-
-        @Provides
-        fun provideKimetsuNoYaibaLocalDataSource(@ApplicationContext context: Context): KimetsuNoYaibaLocalDataSource {
-            return KimetsuNoYaibaLocalDataSource(context)
+        fun provideCardLocalDataSource(@ApplicationContext context: Context): CardLocalDataSource {
+            return CardLocalDataSource(context)
         }
 
         @Provides
@@ -45,5 +32,4 @@ abstract class AppModule {
             return Gson()
         }
     }
-
 }

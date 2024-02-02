@@ -3,7 +3,7 @@ package com.example.frikartas.domain.models
 import com.example.frikartas.data.models.LanguageDTO
 
 
-data class OnePieceCard (
+data class Card (
     val name: String,
     val tags: List<String>,
     val rarity: String,
@@ -18,6 +18,6 @@ data class OnePieceCard (
     val description: String,
     val languages: List<LanguageDTO>,
     val size: String,
-    val collection: OnePieceCollection
+    val collection: Collection
 )
 

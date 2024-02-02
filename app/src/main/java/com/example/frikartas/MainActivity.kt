@@ -11,12 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.frikartas.ui.screens.KimetsuNoYaibaDetailScreen
-import com.example.frikartas.ui.screens.KimetsuNoYaibaListScreen
 import com.example.frikartas.ui.screens.MainScreen
-import com.example.frikartas.ui.screens.OnePieceCollectionDetailScreen
-import com.example.frikartas.ui.screens.OnePieceDetailScreen
-import com.example.frikartas.ui.screens.OnePieceListScreen
+import com.example.frikartas.ui.screens.CollectionDetailScreen
+import com.example.frikartas.ui.screens.CardDetailScreen
+import com.example.frikartas.ui.screens.CardListScreen
 import com.example.frikartas.ui.theme.FrikartasTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -46,23 +44,16 @@ fun FrikartasNavigation() {
             MainScreen(onNavigate = { navController.navigate(it) })
         }
         composable("onePieceList") {
-            OnePieceListScreen(navController)
+            CardListScreen(navController)
         }
         composable("onePieceDetail/{collectionName}/{cardName}") { backStackEntry ->
             val collectionName = backStackEntry.arguments?.getString("collectionName") ?: ""
             val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
-            OnePieceDetailScreen(navController, collectionName, cardName)
+            CardDetailScreen(navController, collectionName, cardName)
         }
         composable("onePieceCollectionDetail/{collectionName}") { backStackEntry ->
             val collectionName = backStackEntry.arguments?.getString("collectionName") ?: ""
-            OnePieceCollectionDetailScreen(navController, collectionName)
-        }
-        composable("kimetsuNoYaibaList") {
-            KimetsuNoYaibaListScreen(navController)
-        }
-        composable("kimetsuNoYaibaDetail/{cardName}") { backStackEntry ->
-            val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
-            KimetsuNoYaibaDetailScreen(navController, cardName)
+            CollectionDetailScreen(navController, collectionName)
         }
     }
 }

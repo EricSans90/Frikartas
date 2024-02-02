@@ -2,10 +2,10 @@ package com.example.frikartas.data.mappers
 
 import com.example.frikartas.data.models.OnePieceCardDTO
 import com.example.frikartas.data.models.OnePieceCollectionDTO
-import com.example.frikartas.domain.models.OnePieceCard
-import com.example.frikartas.domain.models.OnePieceCollection
+import com.example.frikartas.domain.models.Card
+import com.example.frikartas.domain.models.Collection
 
-fun mapOnePieceCardDTOToCard(onePieceCardDTO: OnePieceCardDTO, collection: OnePieceCollection) = OnePieceCard(
+fun mapOnePieceCardDTOToCard(onePieceCardDTO: OnePieceCardDTO, collection: Collection) = Card(
     name = onePieceCardDTO.name,
     tags = onePieceCardDTO.tags,
     rarity = onePieceCardDTO.rarity,
@@ -20,8 +20,8 @@ fun mapOnePieceCardDTOToCard(onePieceCardDTO: OnePieceCardDTO, collection: OnePi
     collection = collection
 )
 
-fun mapOnePieceCollectionDTOToCollection(onePieceCollectionDTO: OnePieceCollectionDTO): OnePieceCollection {
-    val collection = OnePieceCollection(
+fun mapOnePieceCollectionDTOToCollection(onePieceCollectionDTO: OnePieceCollectionDTO): Collection {
+    val collection = Collection(
         name = onePieceCollectionDTO.name,
         publicationYear = onePieceCollectionDTO.publicationYear,
         cards = mutableListOf() // Inicializa con una lista vacía, se llena luego
