@@ -2,12 +2,12 @@
   {
     "collectionId": 1,
     "collectType": "ONEPIECE",
-    "name": "Colección Wanted",
+    "name": "Colección Wanted-OP01",
     "publicationYear": 2020,
     "cards": [
       {
         "cardId": 1,
-        "name": "OP01-001 Luffy",
+        "name": "Luffy",
         "tags": [
           "D.",
           "Luffy",
@@ -24,7 +24,7 @@
           "https://drive.google.com/file/d/1JdCDqwZNbpx_FB19ZuiJpsg3sy0wvv1N/view?usp=drive_link",
           "https://drive.google.com/file/d/1eBNDMOg3v5w0J-c18S8S-ajgxrYC_z2j/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta del yonkou Monkey D. Luffy",
         "languages": [
           "CHINESE",
           "ENGLISH"
@@ -33,7 +33,7 @@
       },
       {
         "cardId": 2,
-        "name": "OP01-002 Ace",
+        "name": "Ace",
         "tags": [
           "Ace",
           "D.",
@@ -49,7 +49,7 @@
           "https://drive.google.com/file/d/1V285beffEYDXnx2DmVDVAjUZsCzJsj27/view?usp=drive_link",
           "https://drive.google.com/file/d/16Hzrlw051yu0tydnLm7GdNoR_wUhYoFr/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Ace",
         "languages": [
           "CHINESE",
           "ENGLISH"
@@ -58,7 +58,7 @@
       },
       {
         "cardId": 3,
-        "name": "OP01-003 Sabo",
+        "name": "Sabo",
         "tags": [
           "Sabo",
           "Revolutionary Army",
@@ -73,7 +73,7 @@
           "https://drive.google.com/file/d/1F3OWxq6yElIglJL-0BB9qXvHkWuQXr29/view?usp=drive_link",
           "https://drive.google.com/file/d/1W-kSQv7OW0Ag2LMS3Xak9R0orQaN-3UD/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Sabo",
         "languages": [
           "CHINESE",
           "ENGLISH"
@@ -82,7 +82,7 @@
       },
       {
         "cardId": 4,
-        "name": "OP01-004 Edward Newgate",
+        "name": "Edward Newgate",
         "tags": [
           "D.",
           "Luffy",
@@ -99,7 +99,7 @@
           "https://drive.google.com/file/d/1icHnpzgk62_u6hOCX9WEbY3Xz6DXDNWK/view?usp=drive_link",
           "https://drive.google.com/file/d/1JTvFp491zL2m0kDM_iJA5sHCIjAAYYzY/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Shirohige (Edward Newgate)",
         "languages": [
           "CHINESE",
           "ENGLISH"
@@ -108,7 +108,7 @@
       },
       {
         "cardId": 5,
-        "name": "OP01-006 Aokiji",
+        "name": "Aokiji",
         "tags": [
           "Aokiji",
           "Marine",
@@ -124,7 +124,7 @@
           "https://drive.google.com/file/d/1w795rodoopvbWZ7M7dfXc_8aAFMKUAB0/view?usp=drive_link",
           "https://drive.google.com/file/d/1KxnE9Cm2ykek64VTQcS6kU3QN924blhv/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta del almirante Aokiji",
         "languages": [
           "CHINESE"
         ],
@@ -132,7 +132,7 @@
       },
       {
         "cardId": 6,
-        "name": "OP01-007 Kizaru",
+        "name": "Kizaru",
         "tags": [
           "Kizaru",
           "Marine",
@@ -148,7 +148,7 @@
           "https://drive.google.com/file/d/1kJW4L8Wou7MG3H8zvGhETODJfxx69UWt/view?usp=drive_link",
           "https://drive.google.com/file/d/1RqC6SKHrjcbWv3Q5075orT-3erHCOlhY/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta del almirante Kizaru",
         "languages": [
           "CHINESE"
         ],
@@ -156,7 +156,7 @@
       },
       {
         "cardId": 7,
-        "name": "OP01-009 Luffy",
+        "name": "Luffy",
         "tags": [
           "D.",
           "Luffy",
@@ -173,7 +173,7 @@
           "https://drive.google.com/file/d/1Xskh909E0BISCGowhjt80ao60amH-HAx/view?usp=drive_link",
           "https://drive.google.com/file/d/1-P1zVbOOzXJy8GSkOqhzWZ9D8vbpjIwU/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta del yonkou Monkey D. Luffy",
         "languages": [
           "CHINESE"
         ],
@@ -181,7 +181,7 @@
       },
       {
         "cardId": 8,
-        "name": "OP01-010 Zoro",
+        "name": "Zoro",
         "tags": [
           "Zoro",
           "Mugiwara",
@@ -196,7 +196,7 @@
           "https://drive.google.com/file/d/1aftq0lb2JKc9cU0sxR2s4IXSDXcVhQLz/view?usp=drive_link",
           "https://drive.google.com/file/d/11VcR8y9zhj7gBg2fYfWCE8gD835g82x1/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Roronoa Zoro",
         "languages": [
           "CHINESE"
         ],
@@ -204,7 +204,7 @@
       },
       {
         "cardId": 9,
-        "name": "OP01-011 Nami",
+        "name": "Nami",
         "tags": [
           "Nami",
           "Waifu",
@@ -220,7 +220,7 @@
           "https://drive.google.com/file/d/12g2efNIGvIjLJ03QFtZIBWu3K_sZSs3n/view?usp=drive_link",
           "https://drive.google.com/file/d/1ljVEgVKKdefZMicShbLgN2GR7p5npwMd/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Nami",
         "languages": [
           "CHINESE"
         ],
@@ -228,7 +228,7 @@
       },
       {
         "cardId": 10,
-        "name": "OP01-012 Usopp",
+        "name": "Usopp",
         "tags": [
           "Usopp",
           "Mugiwara",
@@ -243,7 +243,7 @@
           "https://drive.google.com/file/d/1DRg4R26OOWpAaALF9eHCOGo1pF4LC6as/view?usp=drive_link",
           "https://drive.google.com/file/d/1gOUF5SOT5ukrBZa83Eb_Lte_QSboD5-0/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Usopp",
         "languages": [
           "CHINESE"
         ],
@@ -251,7 +251,7 @@
       },
       {
         "cardId": 11,
-        "name": "OP01-013 Sanji",
+        "name": "Sanji",
         "tags": [
           "Sanji",
           "Mugiwara",
@@ -266,7 +266,7 @@
           "https://drive.google.com/file/d/1ghmqLuZcRlFHnda-zeXl5rK47WNhcYDo/view?usp=drive_link",
           "https://drive.google.com/file/d/1kEaWsMKxT5lbR-xFdtfzo1Sf7EG4hwGW/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Vinsmoke Sanji",
         "languages": [
           "CHINESE"
         ],
@@ -274,7 +274,7 @@
       },
       {
         "cardId": 12,
-        "name": "OP01-014 Chopper",
+        "name": "Chopper",
         "tags": [
           "Chopper",
           "Mugiwara",
@@ -289,7 +289,7 @@
           "https://drive.google.com/file/d/1gCqCU8D5g3VjqhC-8S4pyo_IuouUpYDk/view?usp=drive_link",
           "https://drive.google.com/file/d/1bTKSnK7vJG_NzIpfn-Ja4sg44rQoXWbV/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Tony Tony Chopper",
         "languages": [
           "CHINESE"
         ],
@@ -297,7 +297,7 @@
       },
       {
         "cardId": 13,
-        "name": "OP01-015 Robin",
+        "name": "Robin",
         "tags": [
           "Robin",
           "Waifu",
@@ -313,7 +313,7 @@
           "https://drive.google.com/file/d/1XBAYWi1kbSWd6AJCdM3MUdl7Qdrhius0/view?usp=drive_link",
           "https://drive.google.com/file/d/1JJFraQPQ-umD9Z34iB-KJVGjzHBF3beC/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Nico Robin",
         "languages": [
           "CHINESE"
         ],
@@ -321,7 +321,7 @@
       },
       {
         "cardId": 14,
-        "name": "OP01-016 Franky",
+        "name": "Franky",
         "tags": [
           "Franky",
           "Mugiwara",
@@ -336,7 +336,7 @@
           "https://drive.google.com/file/d/1FWNzADdOwEvhBQc5aA9YLG-5Z3XnpfJ3/view?usp=drive_link",
           "https://drive.google.com/file/d/1zd9x2X-t1yfnDTtvtcwx5esly5pHYBIk/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Franky",
         "languages": [
           "CHINESE"
         ],
@@ -344,7 +344,7 @@
       },
       {
         "cardId": 15,
-        "name": "OP01-017 Brook",
+        "name": "Brook",
         "tags": [
           "Brook",
           "Mugiwara",
@@ -359,7 +359,7 @@
           "https://drive.google.com/file/d/15A_tkS2IicG4jXbXnFt8Ct1lt2tFFDhy/view?usp=drive_link",
           "https://drive.google.com/file/d/1ZLDI7JsZQxQnQdR_3adURMVpZgEtGN3g/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Brook",
         "languages": [
           "CHINESE"
         ],
@@ -367,7 +367,7 @@
       },
       {
         "cardId": 16,
-        "name": "OP01-018 Jinbe",
+        "name": "Jinbe",
         "tags": [
           "Jinbe",
           "Mugiwara",
@@ -382,7 +382,7 @@
           "https://drive.google.com/file/d/1x20nyz4E_HnYn06IZyJyGXgDQJH1hPgm/view?usp=drive_link",
           "https://drive.google.com/file/d/1PweIzlILxShQdFvlKT7dkfK3WpURgRJ2/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de Jinbe",
         "languages": [
           "CHINESE"
         ],
@@ -393,53 +393,570 @@
   {
     "collectionId": 2,
     "collectType": "ONEPIECE",
-    "name": "Colección Wanted2 Test",
-    "publicationYear": 2020,
+    "name": "Colección MangaCover",
+    "publicationYear": 2022,
     "cards": [
       {
         "cardId": 17,
-        "name": "OP-1M-001 Ace",
+        "name": "MC-001",
         "tags": [
-          "Ace",
           "D.",
-          "Shirohige Kaizokudan",
-          "Wanted"
+          "Luffy",
+          "Yonkou",
+          "Zoro",
+          "Nami",
+          "Waifu",
+          "Mugiwara",
+          "MangaCover"
         ],
-        "rarity": "HR",
-        "stock": 2,
-        "price": 40,
-        "discount": true,
-        "SKU": "OP-Wan-OP1M-HR-001",
+        "rarity": "PR",
+        "stock": 1,
+        "price": 5,
+        "discount": false,
+        "SKU": "OP-MC-001",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_023216.jpg"
+          "https://drive.google.com/file/d/1S2J1ljnaTMfAkiKzB1atKOtnC3knR3DQ/view?usp=drive_link",
+          "https://drive.google.com/file/d/10ibRI0UBGYBpn7d3oCQD2yMVFzVuN4w4/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de la portada número 001 del manga de One Piece",
         "languages": [
-          "CHINESE"
+          "CHINESE",
+          "ENGLISH"
         ],
         "size": "6.3x8.8 cm"
       },
       {
         "cardId": 18,
-        "name": "OP-1M-003 Garp",
+        "name": "MC-002",
         "tags": [
           "D.",
-          "Garp",
-          "Marine",
-          "Admiral",
-          "Wanted"
+          "Luffy",
+          "Yonkou",
+          "Mugiwara",
+          "Buggy",
+          "Mohji",
+          "Cabaji",
+          "Buggy Pirates",
+          "Cross Guild",
+          "MangaCover"
         ],
-        "rarity": "HR",
+        "rarity": "PR",
         "stock": 1,
-        "price": 40,
+        "price": 2,
         "discount": true,
-        "SKU": "OP-Wan-OP1M-HR-003",
+        "SKU": "OP-MC-002",
         "urlImages": [
-          "http://localhost:8080/wordpress/wp-content/uploads/2023/07/20230630_023359.jpg"
+          "https://drive.google.com/file/d/1dvHXTG3B143svYjLK8n4DQik4Y4EKwa2/view?usp=drive_link",
+          "https://drive.google.com/file/d/1K2JEUaH-7NC3wNVu4My41IKy2tyOEN09/view?usp=drive_link"
         ],
-        "description": "Carta de X",
+        "description": "Carta de la portada número 002 del manga de One Piece",
         "languages": [
-          "CHINESE"
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 19,
+        "name": "MC-003",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Zoro",
+          "Mugiwara",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 3,
+        "discount": true,
+        "SKU": "OP-MC-003",
+        "urlImages": [
+          "https://drive.google.com/file/d/143Ltk3ryrZuLSkA2lqx52i69Y0H7twja/view?usp=drive_link",
+          "https://drive.google.com/file/d/1U-OpTnE7BDNlQdMMrEHMAGg-rw48r7md/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 003 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 20,
+        "name": "MC-004",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Mugiwara",
+          "Kuro",
+          "Sham",
+          "Buchi",
+          "Jango",
+          "Black Cat Pirates",
+          "Marine",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 2,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-004",
+        "urlImages": [
+          "https://drive.google.com/file/d/1wiL-4L40g-pJ9C1DXqIPoqkkHxs6OPlM/view?usp=drive_link",
+          "https://drive.google.com/file/d/1oGxlkT7ZB3DcBU_3-rbmu8GRkeHiYnFu/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 004 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 21,
+        "name": "MC-005",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Zoro",
+          "Usopp",
+          "Nami",
+          "Waifu",
+          "Ninjin",
+          "Piiman",
+          "Tamanegi",
+          "Kaya",
+          "Mugiwara",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 2,
+        "price": 3,
+        "discount": true,
+        "SKU": "OP-MC-005",
+        "urlImages": [
+          "https://drive.google.com/file/d/1NcS24WiyRpyXmf3ewWTfxM9NrOmVS8fl/view?usp=drive_link",
+          "https://drive.google.com/file/d/19vU0SwzkmUGw8e3ywobS_KQCS3VJhd2K/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 005 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 22,
+        "name": "MC-006",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Zoro",
+          "Usopp",
+          "Nami",
+          "Waifu",
+          "Mugiwara",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 2,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-006",
+        "urlImages": [
+          "https://drive.google.com/file/d/1IOqFIC9_Zq1qQDDZsK_sH-S3JB3PnpTU/view?usp=drive_link",
+          "https://drive.google.com/file/d/1STXIFi1kPsRqQ4jNXoFaeN2xxIFASYJ5/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 006 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 23,
+        "name": "MC-007",
+        "tags": ["D.", "Luffy", "Yonkou", "Sanji", "Mugiwara", "MangaCover"],
+        "rarity": "PR",
+        "stock": 2,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-007",
+        "urlImages": [
+          "https://drive.google.com/file/d/1NzhhcpW0JKR5QGBN7nfODa1SMyCJtfcH/view?usp=drive_link",
+          "https://drive.google.com/file/d/1R2KXNQhIz2ATlKdF8Zhoec3UgPAN9G59/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 007 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 24,
+        "name": "MC-008",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Mugiwara",
+          "Krieg",
+          "Gin",
+          "Pearl",
+          "Krieg Pirates",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 2,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-008",
+        "urlImages": [
+          "https://drive.google.com/file/d/1F3r7j-b5zxTP6muZ63USUVcv9MfHuv4W/view?usp=drive_link",
+          "https://drive.google.com/file/d/1bEK-uuCTyB2n3t_kGxzwORVxvun_e0Kr/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 008 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 25,
+        "name": "MC-009",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Zoro",
+          "Sanji",
+          "Usopp",
+          "Nami",
+          "Waifu",
+          "Mugiwara",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 2,
+        "price": 3,
+        "discount": true,
+        "SKU": "OP-MC-009",
+        "urlImages": [
+          "https://drive.google.com/file/d/1kROdXfldDWpJlZ9CqE0WBDRZxkITdn0j/view?usp=drive_link",
+          "https://drive.google.com/file/d/1kCWXdhOOJ__rzTQNkWb_8wJdkCreI23G/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 009 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 26,
+        "name": "MC-010",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Mugiwara",
+          "Arlong",
+          "Hatchan",
+          "Kuroobi",
+          "Chew",
+          "Arlong Pirates",
+          "Momoo",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-010",
+        "urlImages": [
+          "https://drive.google.com/file/d/1AVqnHsxKsb6n8aAGQPPqlOoNXaOPkcIg/view?usp=drive_link",
+          "https://drive.google.com/file/d/1JylD6YDVBBsYewLCvBq8NkcU4bN8cHiz/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 010 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 27,
+        "name": "MC-011",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Zoro",
+          "Sanji",
+          "Usopp",
+          "Nami",
+          "Waifu",
+          "Mugiwara",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-011",
+        "urlImages": [
+          "https://drive.google.com/file/d/1XD3jYnjyqYg11wm5baxM4NQbYejSWIX4/view?usp=drive_link",
+          "https://drive.google.com/file/d/1iqbC0U2YzYGVUkkWiNzcGZYTzYCB_Jp8/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 011 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 28,
+        "name": "MC-012",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Zoro",
+          "Sanji",
+          "Usopp",
+          "Nami",
+          "Waifu",
+          "Mugiwara",
+          "Going Merry",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 3,
+        "discount": true,
+        "SKU": "OP-MC-012",
+        "urlImages": [
+          "https://drive.google.com/file/d/1rgNEi1kad2CPCWCRJh3C9OdLdZOszzBD/view?usp=drive_link",
+          "https://drive.google.com/file/d/1bMg_JcdyqfkWO3bU2LzAz8x0l_nizCHC/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 012 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 29,
+        "name": "MC-013",
+        "tags": ["D.", "Luffy", "Yonkou", "Vivi", "Waifu", "Mugiwara", "Igaram", "Gem", "Mr.9", "Miss Monday", "Mr.13", "Miss Friday", "MangaCover"],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 1.5,
+        "discount": true,
+        "SKU": "OP-MC-013",
+        "urlImages": [
+          "https://drive.google.com/file/d/18mHllCE0ACbmAbvY69ailKYFE4dg1mYx/view?usp=drive_link",
+          "https://drive.google.com/file/d/1SmiikaZe_xzTjs_BN-NRj34OSoKCQVg2/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 013 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 30,
+        "name": "MC-014",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Vivi",
+          "Waifu",
+          "Karoo",
+          "Galdino",
+          "Miss Goldenweek",
+          "Mugiwara",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 1.5,
+        "discount": true,
+        "SKU": "OP-MC-014",
+        "urlImages": [
+          "https://drive.google.com/file/d/1cRm10lN5bRJIk3NnSgpJePoUJB3oUs8R/view?usp=drive_link",
+          "https://drive.google.com/file/d/1cRm10lN5bRJIk3NnSgpJePoUJB3oUs8R/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 014 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 31,
+        "name": "MC-015",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Usopp",
+          "Mugiwara",
+          "Brogy",
+          "Dorry",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-015",
+        "urlImages": [
+          "https://drive.google.com/file/d/1SccmWNRrA-x--LCfOlr5XPtLzkTZYz1-/view?usp=drive_link",
+          "https://drive.google.com/file/d/1fmkz0IgSKpu61y9oNdsVu_WDnNC4oFl6/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 015 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 32,
+        "name": "MC-016",
+        "tags": ["D.", "Luffy", "Chopper", "Yonkou", "Mugiwara", "Hiriluk", "MangaCover"],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-016",
+        "urlImages": [
+          "https://drive.google.com/file/d/1ptXo8Z2CrLIddsL2ucZlioyrTqqd1L8e/view?usp=drive_link",
+          "https://drive.google.com/file/d/1sEksSLiPTFetQwGO4bL-5WMZ6X0r66GA/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 016 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 33,
+        "name": "MC-017",
+        "tags": ["D.", "Luffy", "Chopper", "Yonkou", "Sanji", "Mugiwara", "Wapol", "Chess", "Kuromarimo", "MangaCover"],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 1.5,
+        "discount": true,
+        "SKU": "OP-MC-017",
+        "urlImages": [
+          "https://drive.google.com/file/d/1Lqy2Bi1PrEBCjG9PvTEOgASSKfS47dW3/view?usp=drive_link",
+          "https://drive.google.com/file/d/1QqUWy1j_G3ojLU-0CMq84HaNoEYgYVut/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 017 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 34,
+        "name": "MC-018",
+        "tags": ["D.", "Luffy", "Chopper", "Yonkou", "Zoro", "Sanji", "Usopp", "Nami", "Vivi", "Waifu", "Mugiwara", "Ace", "Shirohige Kaizokudan", "MangaCover"],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 4,
+        "discount": false,
+        "SKU": "OP-MC-018",
+        "urlImages": [
+          "https://drive.google.com/file/d/1rt3kP2dg_WDQkZdT99dhWyC-eEgDj2y7/view?usp=drive_link",
+          "https://drive.google.com/file/d/1CEl-Qaaovd1Ia5NKXrRJC19fXieUHwDt/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 018 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 35,
+        "name": "MC-019",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Usopp",
+          "Mugiwara",
+          "Cobra",
+          "Chaka",
+          "Pell",
+          "Koza",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 2.5,
+        "discount": true,
+        "SKU": "OP-MC-019",
+        "urlImages": [
+          "https://drive.google.com/file/d/1Sz27dyAP7cLlWtRsLIz_rO9Ztaytx778/view?usp=drive_link",
+          "https://drive.google.com/file/d/1WCj27ztL5bMgpiZp99jnNH3N3f72EfpM/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 019 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
+        ],
+        "size": "6.3x8.8 cm"
+      },
+      {
+        "cardId": 36,
+        "name": "MC-020",
+        "tags": [
+          "D.",
+          "Luffy",
+          "Yonkou",
+          "Mugiwara",
+          "Crocodile",
+          "Baroque Works",
+          "Cross Guild",
+          "Smoker",
+          "Marine",
+          "Koza",
+          "Cobra",
+          "Karoo",
+          "MangaCover"
+        ],
+        "rarity": "PR",
+        "stock": 1,
+        "price": 2,
+        "discount": true,
+        "SKU": "OP-MC-020",
+        "urlImages": [
+          "https://drive.google.com/file/d/1kBlIW4_vdZZFSJ9kDBck0ciuDrbcVZiU/view?usp=drive_link",
+          "https://drive.google.com/file/d/1DuP-5q9X87FcfYn2Hkl6_to1K9i-nyak/view?usp=drive_link"
+        ],
+        "description": "Carta de la portada número 020 del manga de One Piece",
+        "languages": [
+          "CHINESE",
+          "ENGLISH"
         ],
         "size": "6.3x8.8 cm"
       }

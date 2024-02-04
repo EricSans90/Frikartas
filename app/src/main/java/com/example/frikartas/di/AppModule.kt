@@ -37,7 +37,8 @@ abstract class AppModule {
 
         @Provides
         fun provideRetrofit(): Retrofit = Retrofit.Builder()
-            // Cambiar por la URL base
+            // Cambiar por la URL base que no implementaré en este proyecto pero SI en el de final de Grado
+            //que será una ampliación de este y haré un servidor con springBoot
             .baseUrl("http://api_base_url/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
