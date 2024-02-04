@@ -52,11 +52,6 @@ class CardViewModel @Inject constructor(private val repository: CardRepository) 
     private val _navigationEvents = MutableSharedFlow<String>()
     val navigationEvents = _navigationEvents.asSharedFlow()
 
-    fun onCollectionSelected(collectionName: String) {
-        viewModelScope.launch {
-            _navigationEvents.emit("onePieceCollectionDetail/$collectionName")
-        }
-    }
 
     //método para obtener una carta por ID
     fun getCardById(cardId: Int): Card? {
@@ -66,5 +61,39 @@ class CardViewModel @Inject constructor(private val repository: CardRepository) 
     //método para obtener una colección por ID
     fun getCollectionById(collectionId: Int): Collection? {
         return collections.value?.find { it.collectionId == collectionId }
+    }
+
+    // Método para obtener una colección al azar
+    fun getRandomCollectionId(): Int? {
+        val currentCollections = collections.value
+        if (!currentCollections.isNullOrEmpty()) {
+            val randomIndex = (currentCollections.indices).random()
+            return currentCollections[randomIndex].collectionId
+        }
+        return null  // Devuelve null si no hay colecciones
+    }
+
+    // Método para obtener una carta al azar
+    fun getRandomCardId(): Int? {
+        // usando todas las cartas de todas las colecciones para esto
+        val allCards = collections.value?.flatMap { it.cards }
+        if (!allCards.isNullOrEmpty()) {
+            val randomIndex = (allCards.indices).random()
+            return allCards[randomIndex].cardId
+        }
+        return null  // Devuelve null si no hay cartas
+    }
+
+    // Método para obtener una carta al azar que tiene descuento
+    fun getRandomDiscountedCardId(): Int? {
+        // Filtra todas las cartas para obtener solo aquellas con descuento
+        val discountedCards = collections.value
+            ?.flatMap { it.cards }
+            ?.filter { it.discount }
+        if (!discountedCards.isNullOrEmpty()) {
+            val randomIndex = (discountedCards.indices).random()
+            return discountedCards[randomIndex].cardId
+        }
+        return null  // Devuelve null si no hay cartas con descuento
     }
 }

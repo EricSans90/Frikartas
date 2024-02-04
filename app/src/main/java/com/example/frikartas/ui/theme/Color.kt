@@ -12,3 +12,6 @@ val Pink40 = Color(0xFF7D5260)
 
 val BluePers = Color(0xFF4763FF)
 val Discount = Color(0xFFFF5722)
+
+val BlueTopAppBAr = Color(0xFF29315E)
+val BlueBottomAppBAr = Color(0xFF374179)
