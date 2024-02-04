@@ -13,7 +13,7 @@ import com.example.frikartas.domain.models.Collection
 
 
 @Composable
-fun CollectionDetailView(collection: Collection, onItemClick: (collectionName: String, cardName: String) -> Unit) {
+fun CollectionDetailView(collection: Collection, onItemClick: (String, Int) -> Unit) {
     Column(modifier = Modifier.padding(16.dp)) {
         Text(text = "Colección: ${collection.name}")
         Text(text = "Año de Publicación: ${collection.publicationYear}")
@@ -23,7 +23,7 @@ fun CollectionDetailView(collection: Collection, onItemClick: (collectionName: S
         LazyColumn {
             items(collection.cards) { card ->
                 CardListItem(card = card, onItemClick = {
-                    onItemClick(collection.name, card.name)
+                    onItemClick(collection.name, card.cardId)
                 })
             }
         }

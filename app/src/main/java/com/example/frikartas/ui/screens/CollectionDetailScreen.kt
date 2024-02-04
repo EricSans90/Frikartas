@@ -19,19 +19,8 @@ import com.example.frikartas.ui.viewmodels.CardViewModel
 fun CollectionDetailScreen(navController: NavController, collectionId: Int, viewModel: CardViewModel = hiltViewModel()) {
     val collection = viewModel.getCollectionById(collectionId)
     collection?.let { col ->
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "Colección: ${col.name}")
-            Text(text = "Año de Publicación: ${col.publicationYear}")
-            Divider()
-            Text(text = "Cartas en la colección:")
-
-            LazyColumn {
-                items(col.cards) { card ->
-                    CardListItem(card = card, onItemClick = {
-                        navController.navigate("cardDetail/${card.cardId}")
-                    })
-                }
-            }
-        }
+        CollectionDetailView(collection = col, onItemClick = { _, cardId ->
+            navController.navigate("cardDetail/$cardId")
+        })
     } ?: Text(text = "Collection not found")
 }
