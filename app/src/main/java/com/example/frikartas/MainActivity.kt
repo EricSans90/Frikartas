@@ -40,6 +40,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -87,7 +88,8 @@ class MainActivity : ComponentActivity() {
                         bottomBar = { AppBottomBar() }
                     ) { innerPadding ->
                         Surface(
-                            modifier = Modifier.padding(innerPadding)
+                            modifier = Modifier.padding(innerPadding),
+                            color = Color.DarkGray
                         ) {
                             FrikartasNavigation()
                         }
@@ -196,6 +198,6 @@ fun AppTopBar(title: String, onNavigationIconClick: () -> Unit) {
 @Composable
 fun AppBottomBar() {
     BottomAppBar {
-        // Agrega los botones o acciones que necesitas aquí
+
     }
 }

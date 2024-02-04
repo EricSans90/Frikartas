@@ -15,14 +15,15 @@ import androidx.compose.ui.unit.dp
 import com.example.frikartas.domain.models.Collection
 
 @Composable
-fun CardCollectionListItem(collection: Collection, onItemClick: () -> Unit) {
+fun CollectionListItem(collection: Collection, onItemClick: () -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         shape = RoundedCornerShape(topStart = 0.dp, topEnd = 0.dp, bottomStart = 36.dp, bottomEnd = 36.dp),
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onItemClick),
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+            .clickable(onClick = onItemClick)
+            .padding(8.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.LightGray)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(text = collection.name)

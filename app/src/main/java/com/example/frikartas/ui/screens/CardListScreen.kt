@@ -9,7 +9,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.frikartas.ui.viewmodels.CardViewModel
 import androidx.compose.runtime.livedata.observeAsState
-import com.example.frikartas.ui.components.CardCollectionListItem
+import com.example.frikartas.ui.components.CollectionListItem
 
 @Composable
 fun CardListScreen(navController: NavController, viewModel: CardViewModel = hiltViewModel()) {
@@ -24,7 +24,7 @@ fun CardListScreen(navController: NavController, viewModel: CardViewModel = hilt
 
     LazyColumn {
         items(onePieceCollections) { collection ->
-            CardCollectionListItem(
+            CollectionListItem(
                 collection = collection,
                 onItemClick = {
                     // Informar al ViewModel que se ha seleccionado una colección
