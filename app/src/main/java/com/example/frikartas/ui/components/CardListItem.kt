@@ -28,14 +28,16 @@ import com.example.frikartas.domain.models.Card
 @Composable
 fun CardListItem(
     card: Card,
-    onItemClick: () -> Unit
+    // Recibe el id de la carta
+    onItemClick: (Int) -> Unit
 ) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         shape = RoundedCornerShape(24.dp),
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onItemClick)
+            // Usa el id de la carta para el evento onClick
+            .clickable(onClick = { onItemClick(card.cardId) })
             .padding(8.dp),
         colors = CardDefaults.cardColors(containerColor = Color.LightGray)
     ) {
@@ -46,7 +48,7 @@ fun CardListItem(
                 imageUrl = card.urlImages.firstOrNull() ?: "",
                 imageHeight = 100.dp,
                 imageWidth = 100.dp,
-                onImageClick = { /* Acción al clickar */ }
+                //onImageClick = { /* Acción al clickar */ }
             )
             Spacer(modifier = Modifier.weight(1f))
             Column(horizontalAlignment = Alignment.CenterHorizontally,

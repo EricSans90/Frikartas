@@ -52,6 +52,7 @@ import com.example.frikartas.ui.screens.MainScreen
 import com.example.frikartas.ui.screens.CollectionDetailScreen
 import com.example.frikartas.ui.screens.CardDetailScreen
 import com.example.frikartas.ui.screens.CardListScreen
+import com.example.frikartas.ui.screens.CollectionListScreen
 import com.example.frikartas.ui.theme.FrikartasTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -107,17 +108,20 @@ fun FrikartasNavigation() {
         composable("mainScreen") {
             MainScreen(onNavigate = { navController.navigate(it) })
         }
-        composable("onePieceList") {
-            CardListScreen(navController)
+        composable("collectionList") {
+            CollectionListScreen(navController)
         }
-        composable("onePieceDetail/{collectionName}/{cardName}") { backStackEntry ->
-            val collectionName = backStackEntry.arguments?.getString("collectionName") ?: ""
-            val cardName = backStackEntry.arguments?.getString("cardName") ?: ""
-            CardDetailScreen(navController, collectionName, cardName)
+        composable("collectionDetail/{collectionId}") { backStackEntry ->
+            val collectionId = backStackEntry.arguments?.getString("collectionId")?.toIntOrNull() ?: -1
+            CollectionDetailScreen(navController, collectionId)
         }
-        composable("onePieceCollectionDetail/{collectionName}") { backStackEntry ->
-            val collectionName = backStackEntry.arguments?.getString("collectionName") ?: ""
-            CollectionDetailScreen(navController, collectionName)
+        composable("cardDetail/{cardId}") { backStackEntry ->
+            val cardId = backStackEntry.arguments?.getString("cardId")?.toIntOrNull() ?: -1
+            CardDetailScreen(navController, cardId)
+        }
+        composable("cardList/{collectionId}") { backStackEntry ->
+            val collectionId = backStackEntry.arguments?.getString("collectionId")?.toIntOrNull() ?: -1
+            CardListScreen(navController, collectionId)
         }
     }
 }

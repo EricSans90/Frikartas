@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 fun MainScreen(onNavigate: (String)-> Unit){
     Column(Modifier.fillMaxSize()){
         Text("Bienvenido a Frikartas")
-        Button(onClick = { onNavigate("onePieceList") }) {
-            Text("Ver lista de colecciones de One Piece")
+        Button(onClick = { onNavigate("collectionList") }) {
+            Text("Ver lista de colecciones")
         }
     }
 }
