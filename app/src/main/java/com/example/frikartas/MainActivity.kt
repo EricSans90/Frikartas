@@ -78,6 +78,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+//la Documentación técnica externa está en ...\Frikartas\app\build\dokka\html
 /**
  * Actividad principal de Frikartas. Configura y muestra la navegación principal de la aplicación, incluyendo el drawer, la barra de navegación superior y la barra de navegación inferior.
  */
