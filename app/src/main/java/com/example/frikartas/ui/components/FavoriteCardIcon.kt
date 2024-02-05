@@ -16,7 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 
-//Animación
+//Animación del corazón al darle favorito a la carta
+// (no hay lógica de guradar eso en la BD todavía, lo haré en el proyecto de final de grado)
 @Composable
 fun FavoriteCardIcon(isFavorite: Boolean, onFavoriteChange: (Boolean) -> Unit) {
     val scale: Float by animateFloatAsState(

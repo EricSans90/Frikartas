@@ -23,7 +23,7 @@ fun CardDetailScreen(navController: NavController, cardId: Int, viewModel: CardV
             isFavorite = isFavorite,
             onFavoriteChange = { viewModel.toggleFavorite(cardId) },
             onItemClick = { _, cardId ->
-                // Aquí manejas lo que sucede cuando se hace clic en un elemento
+                // Aquí manejo lo que sucede cuando se hace clic en un elemento
             }
         )
     } ?: Text(text = "Card not found")

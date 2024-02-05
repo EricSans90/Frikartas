@@ -325,9 +325,9 @@ actions = {
             }}) {
             Column (horizontalAlignment = Alignment.CenterHorizontally){
                 Icon(imageVector = Icons.Default.Star,
-                    contentDescription = "Discounted Random Card",
+                    contentDescription = "Discounted Promotion Random Card",
                     tint = Color.White)
-                Text(text = "Discounted",
+                Text(text = "Promo",
                     color = Color.White,
                     fontSize = 10.sp)
             }
