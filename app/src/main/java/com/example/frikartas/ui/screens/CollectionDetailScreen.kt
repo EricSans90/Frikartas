@@ -15,6 +15,13 @@ import com.example.frikartas.R
 import com.example.frikartas.ui.components.CollectionDetailView
 import com.example.frikartas.ui.viewmodels.CardViewModel
 
+/**
+ * Pantalla que muestra los detalles de una colección específica, incluyendo una lista de cartas pertenecientes a la colección.
+ *
+ * @param navController Controlador de navegación para manejar la navegación entre pantallas.
+ * @param collectionId Identificador de la colección cuyos detalles se quieren mostrar.
+ * @param viewModel ViewModel que provee los datos y operaciones relacionados con las cartas y colecciones.
+ */
 @Composable
 fun CollectionDetailScreen(navController: NavController, collectionId: Int, viewModel: CardViewModel = hiltViewModel()) {
     val collection = viewModel.getCollectionById(collectionId)

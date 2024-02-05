@@ -78,6 +78,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+/**
+ * Actividad principal de Frikartas. Configura y muestra la navegación principal de la aplicación, incluyendo el drawer, la barra de navegación superior y la barra de navegación inferior.
+ */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val cardViewModel: CardViewModel by viewModels()
@@ -86,11 +89,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FrikartasTheme {
+                // Configuración y estado del drawer (menú lateral)
                 val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
                 val scope = rememberCoroutineScope()
                 val navController = rememberNavController()
 
-
+                // Estructura principal de la aplicación
                 ModalNavigationDrawer(
                     drawerContent = {
                         Column(Modifier.fillMaxWidth()) {
@@ -99,6 +103,7 @@ class MainActivity : ComponentActivity() {
                     },
                     drawerState = drawerState
                 ) {
+                    // Estructura de la barra superior, barra inferior y contenido principal
                     Scaffold(
                         topBar = {
                             AppTopBar(
@@ -132,7 +137,11 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
+/**
+ * Define la navegación de la aplicación. Configura las rutas y las pantallas asociadas a cada ruta.
+ *
+ * @param navController Controlador de navegación para gestionar la navegación entre pantallas.
+ */
 @Composable
 fun FrikartasNavigation(navController: NavHostController) {
     NavHost(navController = navController, startDestination = "mainScreen") {
@@ -157,6 +166,13 @@ fun FrikartasNavigation(navController: NavHostController) {
     }
 }
 
+/**
+ * Representa un elemento en el drawer (menú lateral).
+ *
+ * @param title Título del elemento.
+ * @param selectedIcon Icono cuando el elemento está seleccionado.
+ * @param unselectedIcon Icono cuando el elemento no está seleccionado.
+ */
 data class DrawerItem(
     val title: String,
     val selectedIcon: ImageVector,
@@ -166,6 +182,9 @@ data class DrawerItem(
     // val badgeCount: Any = 0
 }
 
+/**
+ * Define los elementos a mostrar en el drawer (menú lateral).
+ */
 val drawerItems = listOf(
     DrawerItem(
         title = "Main Screen",
@@ -185,6 +204,15 @@ val drawerItems = listOf(
 
 )
 
+/**
+ * Contenido del drawer (menú lateral). Muestra los elementos del menú y maneja las acciones de selección.
+ *
+ * @param drawerItems Lista de elementos a mostrar en el drawer.
+ * @param drawerState Estado del drawer para controlar su apertura y cierre.
+ * @param scope Alcance de la corrutina para ejecutar acciones del drawer.
+ * @param navController Controlador de navegación para gestionar la navegación entre pantallas.
+ * @param drawerBackgroundColor Color de fondo del drawer.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DrawerContent(
@@ -252,6 +280,13 @@ fun DrawerContent(
     }
 }
 
+/**
+ * Barra superior de la aplicación. Muestra el título de la aplicación y botones de acción.
+ *
+ * @param title Título a mostrar en la barra superior.
+ * @param onNavigationIconClick Acción a realizar cuando se hace clic en el icono de navegación.
+ * @param navController Controlador de navegación para gestionar la navegación entre pantallas.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppTopBar(
@@ -286,7 +321,12 @@ fun AppTopBar(
     )
 }
 
-
+/**
+ * Barra inferior de la aplicación. Muestra acciones rápidas para el usuario.
+ *
+ * @param navController Controlador de navegación para gestionar la navegación entre pantallas.
+ * @param viewModel ViewModel asociado a la barra inferior para gestionar la lógica de negocio.
+ */
 @Composable
 fun AppBottomBar(navController: NavHostController, viewModel: CardViewModel) {
 BottomAppBar(
@@ -339,14 +379,19 @@ containerColor = BlueBottomAppBAr,
 )
 }
 
-
+/**
+ * Vista previa de un componente Composable.
+ */
 @Preview
 @Composable
 fun SimpleComposablePreview() {
     AppBottomBar2()
 }
 
-
+/**
+ * Otra variante de la barra inferior para propósitos de vista previa.
+ * Es una ayuda para la edición de la BottomAppBAr
+ */
 @Composable
 fun AppBottomBar2() {
     BottomAppBar(

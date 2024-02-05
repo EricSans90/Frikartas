@@ -18,6 +18,13 @@ import androidx.compose.ui.graphics.Color
 
 //Animación del corazón al darle favorito a la carta
 // (no hay lógica de guradar eso en la BD todavía, lo haré en el proyecto de final de grado)
+
+/**
+ * Muestra un ícono de corazón que puede ser marcado o desmarcado como favorito.
+ *
+ * @param isFavorite Indica si el ícono está marcado como favorito.
+ * @param onFavoriteChange Acción que se invoca cuando se cambia el estado de favorito.
+ */
 @Composable
 fun FavoriteCardIcon(isFavorite: Boolean, onFavoriteChange: (Boolean) -> Unit) {
     val scale: Float by animateFloatAsState(

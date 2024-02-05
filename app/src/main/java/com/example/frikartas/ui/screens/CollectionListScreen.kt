@@ -22,6 +22,12 @@ import com.example.frikartas.R
 import com.example.frikartas.ui.components.CardListItem
 import com.example.frikartas.ui.components.CollectionListItem
 
+/**
+ * Pantalla que muestra una lista de todas las colecciones disponibles.
+ *
+ * @param navController Controlador de navegación para manejar la navegación entre pantallas.
+ * @param viewModel ViewModel que provee los datos y operaciones relacionados con las colecciones.
+ */
 @Composable
 fun CollectionListScreen(navController: NavController, viewModel: CardViewModel = hiltViewModel()) {
     Box(

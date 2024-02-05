@@ -24,7 +24,12 @@ import com.example.frikartas.domain.models.Collection
 import com.example.frikartas.ui.theme.BlueBottomAppBAr
 import com.example.frikartas.ui.theme.BluePers
 
-
+/**
+ * Representa la vista detallada de una colección específica.
+ *
+ * @param collection La colección a mostrar.
+ * @param onItemClick Acción que se invoca cuando se hace clic en un ítem de la colección.
+ */
 @Composable
 fun CollectionDetailView(collection: Collection, onItemClick: (String, Int) -> Unit) {
     Column(modifier = Modifier.padding(16.dp)
@@ -65,6 +70,15 @@ fun CollectionDetailView(collection: Collection, onItemClick: (String, Int) -> U
     }
 }
 
+/**
+ * Crea un componente de texto con un borde personalizado.
+ *
+ * @param text El texto a mostrar.
+ * @param textColor Color del texto.
+ * @param borderColor Color del borde.
+ * @param borderWidth Ancho del borde.
+ * @param textSize Tamaño del texto.
+ */
 @Composable
 fun BorderedText(
     text: String,

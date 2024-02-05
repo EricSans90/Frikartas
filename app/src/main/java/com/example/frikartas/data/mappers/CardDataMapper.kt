@@ -5,6 +5,17 @@ import com.example.frikartas.data.models.CollectionDTO
 import com.example.frikartas.domain.models.Card
 import com.example.frikartas.domain.models.Collection
 
+/**
+ * Convierte un CardDTO a un objeto de dominio Card.
+ *
+ * Esta función toma un CardDTO que proviene de una fuente de datos,
+ * como puede ser una respuesta de API, y lo convierte en un objeto Card del dominio
+ * que se puede utilizar en la lógica de la aplicación.
+ *
+ * @param cardDTO Objeto CardDTO que contiene la información de la carta.
+ * @param collection Objeto Collection al que pertenece la carta.
+ * @return Un objeto Card con datos mapeados del DTO y asociado a la colección proporcionada.
+ */
 fun mapCardDTOToCard(cardDTO: CardDTO, collection: Collection) = Card(
     cardId = cardDTO.cardId,
     name = cardDTO.name,

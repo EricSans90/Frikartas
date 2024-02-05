@@ -2,9 +2,7 @@ package com.example.frikartas.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -16,6 +14,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.frikartas.R
 
+/**
+ * Pantalla principal de la aplicación. Muestra una imagen de fondo y proporciona un botón para navegar a la lista de colecciones.
+ *
+ * @param onNavigate Función que se invoca para navegar a la lista de colecciones.
+ */
 @Composable
 fun MainScreen(onNavigate: (String)-> Unit){
     Box(

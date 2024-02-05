@@ -54,17 +54,24 @@ import com.example.frikartas.ui.theme.BluePers
 import com.example.frikartas.ui.theme.BlueTopAppBAr
 import com.example.frikartas.ui.theme.Discount
 
+/**
+ * Muestra los detalles de una carta específica, incluyendo imágenes, nombre, rareza, precio,
+ * disponibilidad, descripción y detalles adicionales.
+ *
+ * @param card La carta a mostrar.
+ * @param isFavorite Indica si la carta está marcada como favorita.
+ * @param onFavoriteChange Acción que se invoca cuando se cambia el estado de favorito.
+ * @param onItemClick Acción que se invoca cuando se hace clic en algún elemento de la vista detallada.
+ */
 @Composable
 fun CardDetailView(card: Card,
                    isFavorite: Boolean,
                    onFavoriteChange: (Boolean) -> Unit,
                    onItemClick: (String, Int) -> Unit
 ) {
-    // Estado para alternar entre imágenes
     var imageIndex by rememberSaveable { mutableStateOf(0) }
     var detailsVisible by rememberSaveable { mutableStateOf(false) }
     val scrollState = rememberScrollState()
-
 
     Column(
         modifier = Modifier
@@ -72,112 +79,133 @@ fun CardDetailView(card: Card,
             .verticalScroll(scrollState),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        // Espacio entre TopAppBar e imagen
         Spacer(modifier = Modifier.height(8.dp))
-
-        // Imagen de la carta
         card.urlImages.getOrNull(imageIndex)?.let { imageUrl ->
             CardImage(
                 imageUrl = imageUrl,
                 imageHeight = 375.dp,
                 imageWidth = 275.dp,
-                onImageClick = { imageIndex = (imageIndex + 1) % card.urlImages.size } // Manejar clics en la imagen
+                onImageClick = { imageIndex = (imageIndex + 1) % card.urlImages.size }
             )
         }
 
-        // Espacio entre imagen y texto
         Spacer(modifier = Modifier.height(8.dp))
 
-        Row(horizontalArrangement = Arrangement.SpaceBetween){
-            // Nombre de la carta
-            Text(
-                text = card.name,
-                style = MaterialTheme.typography.headlineLarge,
-                fontWeight = FontWeight.Bold,
-                fontFamily = FontFamily(Font(R.font.onepiecefont)),
-                color = Color.White
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            //icono favorito animado
-            //Cuando haga el proyecto de final de grado esta info la pasaré a la BD
-            // o haré algo con ella de moemnto sirve para ver la animación
-            FavoriteCardIcon(
-                isFavorite = isFavorite,
-                onFavoriteChange = onFavoriteChange
-            )
-        }
+        // Sección del nombre y el icono de favorito
+        NameAndFavoriteSection(card, isFavorite, onFavoriteChange)
 
+        // Sección de rareza, precio y disponibilidad
+        RarityPriceStockSection(card)
 
-        // Rareza de la carta
-        Row(){
-            Text(
-                text = "Rarity: ",
-                color = BluePers,
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.bodyLarge,
-            )
-            Text(
-                text = "${card.rarity}",
-                color = Color.White,
-                style = MaterialTheme.typography.bodyLarge
-            )
-        }
-
-        // Precio y disponibilidad
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = "Price: ",
-                fontWeight = FontWeight.Bold,
-                color = BluePers,
-                style = MaterialTheme.typography.bodyMedium
-            )
-            Text(
-                text = "${card.price}€ ",
-                color = Color.White,
-                style = MaterialTheme.typography.bodyMedium
-            )
-
-            Icon(
-                imageVector = Icons.Default.ArrowForward,
-                contentDescription = "To Stock",
-                tint = if (card.stock > 0) BluePers else Color.Red,
-            )
-
-            StockInfo(card)
-        }
-        // Información del descuento si aplica
-        Row(verticalAlignment = Alignment.CenterVertically){
-            if (card.discount) {
-                Text(
-                    text = "Discount: ${card.discountAmount}%",
-                    color = Discount,
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-        }
-        // Detalles de la carta
-        CardDetailsVisibility(visible = detailsVisible, card = card)
-
-
-        Button(
-            colors = ButtonDefaults.buttonColors(containerColor = BlueTopAppBAr),
-            onClick = { detailsVisible = !detailsVisible },
-            modifier = Modifier.padding(16.dp),
-
-        ) {
-            Text(text = if (detailsVisible) "Hide Details" else "Show Details")
-        }
-
-
+        // Sección de detalles adicionales
+        DetailsSection(card, detailsVisible, { detailsVisible = !detailsVisible })
     }
 }
 
+/**
+ * Muestra la sección del nombre de la carta y el ícono de favorito.
+ *
+ * @param card La carta cuyos detalles se van a mostrar.
+ * @param isFavorite Indica si la carta está marcada como favorita.
+ * @param onFavoriteChange Acción que se invoca cuando se cambia el estado de favorito.
+ */
+@Composable
+fun NameAndFavoriteSection(card: Card, isFavorite: Boolean, onFavoriteChange: (Boolean) -> Unit) {
+    Row(horizontalArrangement = Arrangement.SpaceBetween) {
+        Text(
+            text = card.name,
+            style = MaterialTheme.typography.headlineLarge,
+            fontWeight = FontWeight.Bold,
+            fontFamily = FontFamily(Font(R.font.onepiecefont)),
+            color = Color.White
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        FavoriteCardIcon(
+            isFavorite = isFavorite,
+            onFavoriteChange = onFavoriteChange
+        )
+    }
+}
 
+/**
+ * Muestra la sección de rareza, precio y disponibilidad de la carta.
+ *
+ * @param card La carta cuyos detalles se van a mostrar.
+ */
+@Composable
+fun RarityPriceStockSection(card: Card) {
+    Row() {
+        Text(
+            text = "Rarity: ",
+            color = BluePers,
+            fontWeight = FontWeight.Bold,
+            style = MaterialTheme.typography.bodyLarge,
+        )
+        Text(
+            text = "${card.rarity}",
+            color = Color.White,
+            style = MaterialTheme.typography.bodyLarge
+        )
+    }
+
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            text = "Price: ",
+            fontWeight = FontWeight.Bold,
+            color = BluePers,
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Text(
+            text = "${card.price}€ ",
+            color = Color.White,
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Icon(
+            imageVector = Icons.Default.ArrowForward,
+            contentDescription = "To Stock",
+            tint = if (card.stock > 0) BluePers else Color.Red,
+        )
+        StockInfo(card)
+    }
+
+    if (card.discount) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = "Discount: ${card.discountAmount}%",
+                color = Discount,
+                style = MaterialTheme.typography.bodyMedium
+            )
+        }
+    }
+}
+
+/**
+ * Muestra la sección de detalles adicionales de la carta.
+ *
+ * @param card La carta cuyos detalles se van a mostrar.
+ * @param detailsVisible Controla la visibilidad de los detalles adicionales.
+ * @param onToggleDetails Acción que se invoca para mostrar u ocultar los detalles adicionales.
+ */
+@Composable
+fun DetailsSection(card: Card, detailsVisible: Boolean, onToggleDetails: () -> Unit) {
+    CardDetailsVisibility(visible = detailsVisible, card = card)
+    Button(
+        colors = ButtonDefaults.buttonColors(containerColor = BlueTopAppBAr),
+        onClick = onToggleDetails,
+        modifier = Modifier.padding(16.dp),
+    ) {
+        Text(text = if (detailsVisible) "Hide Details" else "Show Details")
+    }
+}
+
+/**
+ * Muestra u oculta los detalles adicionales de la carta.
+ *
+ * @param visible Controla la visibilidad de los detalles adicionales.
+ * @param card La carta cuyos detalles adicionales se van a mostrar.
+ */
 @Composable
 fun CardDetailsVisibility(visible: Boolean, card: Card) {
-    // Define la animación de visibilidad
     val enterTransition = fadeIn() + expandVertically()
     val exitTransition = fadeOut() + shrinkVertically()
 
@@ -186,73 +214,68 @@ fun CardDetailsVisibility(visible: Boolean, card: Card) {
         enter = enterTransition,
         exit = exitTransition
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            // Descripción de la carta + tamaño + lenguajes
+        Column(modifier = Modifier.padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center) {
             if (card.description.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(8.dp))
-                Column(horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center){
-                    Row(){
-                        Text(
-                            text = "Description: ",
-                            fontWeight = FontWeight.Bold,
-                            color = BluePers,
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                        Text(
-                            text = "${card.description}.",
-                            color = Color.White,
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                    }
-                    Row(){
-                        Text(
-                            text = "Size: ",
-                            fontWeight = FontWeight.Bold,
-                            color = BluePers,
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                        Text(
-                            text = "${card.size}.",
-                            color = Color.White,
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                    }
-                    Row(){
-                        Text(
-                            text = "Languages: ",
-                            fontWeight = FontWeight.Bold,
-                            color = BluePers,
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                        Text(
-                            text = "${card.languages.joinToString(", ") { it.displayName }}",
-                            color = Color.White,
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                    }
+                Row(horizontalArrangement = Arrangement.Center){
+                    Text(
+                        text = "Description: ",
+                        fontWeight = FontWeight.Bold,
+                        color = BluePers,
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                    Text(
+                        text = "${card.description}.",
+                        color = Color.White,
+                        style = MaterialTheme.typography.bodyMedium
+                    )
                 }
+                Row(horizontalArrangement = Arrangement.Center){
+                    Text(
+                        text = "Size: ",
+                        fontWeight = FontWeight.Bold,
+                        color = BluePers,
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                    Text(
+                        text = "${card.size}.",
+                        color = Color.White,
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                }
+                Row(horizontalArrangement = Arrangement.Center){
+                    Text(
+                        text = "Languages: ",
+                        fontWeight = FontWeight.Bold,
+                        color = BluePers,
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                    Text(
+                        text = "${card.languages.joinToString(", ") { it.displayName }}",
+                        color = Color.White,
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                }
+
             }
         }
     }
 }
 
-
+/**
+ * Muestra la información de stock de la carta.
+ *
+ * @param card La carta cuya información de stock se va a mostrar.
+ */
 @Composable
 fun StockInfo(card: Card) {
     Box(contentAlignment = Alignment.TopEnd) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = if (card.stock > 0) "In Stock" else "Out of Stock",
-                color = if (card.stock > 0) Color.Green else Color.Red,
-                style = MaterialTheme.typography.bodyMedium
-            )
-            // Otros elementos
-        }
-
-        // Badge con el stock
+        Text(
+            text = if (card.stock > 0) "In Stock" else "Out of Stock",
+            color = if (card.stock > 0) Color.Green else Color.Red,
+            style = MaterialTheme.typography.bodyMedium
+        )
         if (card.stock > 0) {
             StockBadge(stock = card.stock)
         }
@@ -260,28 +283,41 @@ fun StockInfo(card: Card) {
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
+/**
+ * Muestra un badge con el número de items en stock.
+ *
+ * @param stock El número de items en stock.
+ */
 @Composable
 fun StockBadge(stock: Int) {
     BadgedBox(badge = {
         Badge { Text(text = stock.toString()) }
     }) {
-        // Aquí puedes poner un icono si quieres que el badge esté asociado a un icono
+        // Icono relacionado con el stock puede ser agregado aquí
     }
 }
 
+/**
+ * Muestra la imagen de la carta.
+ *
+ * @param imageUrl URL de la imagen a mostrar.
+ * @param modifier Modificador para personalizar el diseño de la imagen.
+ * @param imageHeight Altura de la imagen.
+ * @param imageWidth Ancho de la imagen.
+ * @param onImageClick Acción que se invoca cuando se hace clic en la imagen.
+ */
 @Composable
 fun CardImage(
     imageUrl: String,
     modifier: Modifier = Modifier,
     imageHeight: Dp = 200.dp,
     imageWidth: Dp = 250.dp,
-    onImageClick: (() -> Unit)? = null // Opcional, si quieres manejar clics en la imagen
+    onImageClick: (() -> Unit)? = null // Opcional
 ) {
     val processedImageUrl = generateUrl(imageUrl)
     val imageHeightPx = imageHeight.toPx().toInt()
     val imageWidthPx = imageWidth.toPx().toInt()
 
-    // AndroidView con ImageView para usar Glide
     AndroidView(
         factory = { context ->
             ImageView(context).apply {
@@ -293,13 +329,10 @@ fun CardImage(
             }
         },
         update = { imageView ->
-            // Cargar la imagen con Glide
             Glide.with(imageView.context)
                 .load(processedImageUrl)
                 .apply(RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL).centerCrop())
                 .into(imageView)
-
-            // Opcional: Manejar clics en la imagen
             onImageClick?.let { clickAction ->
                 imageView.setOnClickListener { clickAction() }
             }
@@ -308,13 +341,21 @@ fun CardImage(
     )
 }
 
-// Función para convertir la URL de Google Drive a una URL descargable
+/**
+ * Convierte una URL de Google Drive en una URL descargable.
+ *
+ * @param s La URL original de Google Drive.
+ * @return La URL transformada para descarga directa.
+ */
 fun generateUrl(s: String): String {
     val p = s.split("/")
     return "https://drive.google.com/uc?export=download&id=" + p[5]
 }
 
 @Composable
-// Función de extensión para convertir Dp a Px
+        /**
+         * Convierte unidades Dp a píxeles.
+         *
+         * @return El valor en píxeles correspondiente a las unidades Dp.
+         */
 fun Dp.toPx() = this.value * LocalContext.current.resources.displayMetrics.density
-

@@ -25,6 +25,12 @@ import coil.size.Size
 import com.example.frikartas.R
 import com.example.frikartas.domain.models.Card
 
+/**
+ * Representa un ítem de lista individual para una carta.
+ *
+ * @param card La carta a mostrar.
+ * @param onItemClick Acción que se invoca cuando se hace clic en el ítem.
+ */
 @Composable
 fun CardListItem(
     card: Card,

@@ -23,6 +23,12 @@ import androidx.compose.ui.unit.sp
 import com.example.frikartas.R
 import com.example.frikartas.domain.models.Collection
 
+/**
+ * Representa un ítem de lista individual para una colección.
+ *
+ * @param collection La colección a mostrar.
+ * @param onItemClick Acción que se invoca cuando se hace clic en el ítem.
+ */
 @Composable
 fun CollectionListItem(collection: Collection, onItemClick: () -> Unit) {
     Card(

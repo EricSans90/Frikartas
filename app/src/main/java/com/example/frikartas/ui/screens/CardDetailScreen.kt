@@ -11,6 +11,13 @@ import androidx.navigation.NavController
 import com.example.frikartas.ui.components.CardDetailView
 import com.example.frikartas.ui.viewmodels.CardViewModel
 
+/**
+ * Pantalla de detalles de la carta. Muestra los detalles de una carta específica, permitiendo al usuario marcarla como favorita.
+ *
+ * @param navController Controlador de navegación para manejar la navegación entre pantallas.
+ * @param cardId Identificador de la carta cuyos detalles se quieren mostrar.
+ * @param viewModel ViewModel que provee los datos y operaciones relacionados con las cartas.
+ */
 @Composable
 fun CardDetailScreen(navController: NavController, cardId: Int, viewModel: CardViewModel = hiltViewModel()) {
     val card = viewModel.getCardById(cardId)

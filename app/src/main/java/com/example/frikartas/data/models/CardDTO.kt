@@ -1,5 +1,21 @@
 package com.example.frikartas.data.models
 
+/**
+ * Objeto de Transferencia de Datos (DTO) para una carta.
+ *
+ * @property cardId Identificador único de la carta.
+ * @property name Nombre de la carta.
+ * @property tags Etiquetas asociadas con la carta.
+ * @property rarity Rareza de la carta.
+ * @property stock Cantidad en inventario.
+ * @property price Precio de la carta.
+ * @property discount Indica si la carta tiene descuento.
+ * @property SKU Código de producto (Stock Keeping Unit).
+ * @property urlImages URLs de las imágenes de la carta.
+ * @property description Descripción de la carta.
+ * @property languages Idiomas en los que está disponible la carta.
+ * @property size Tamaño de la carta.
+ */
 data class CardDTO(
     val cardId: Int,
     val name: String,

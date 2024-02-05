@@ -1,6 +1,5 @@
 package com.example.frikartas.ui.screens
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -16,14 +15,16 @@ import com.example.frikartas.ui.viewmodels.CardViewModel
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
-import com.example.frikartas.R
-import com.example.frikartas.ui.components.CardListItem
 
-
+/**
+ * Pantalla que muestra una lista de cartas pertenecientes a una colección específica.
+ *
+ * @param navController Controlador de navegación para manejar la navegación entre pantallas.
+ * @param collectionId Identificador de la colección cuyas cartas se quieren mostrar.
+ * @param viewModel ViewModel que provee los datos y operaciones relacionados con las cartas.
+ */
 @Composable
 fun CardListScreen(
     navController: NavController,
