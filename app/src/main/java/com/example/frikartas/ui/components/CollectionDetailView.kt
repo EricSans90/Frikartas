@@ -1,8 +1,10 @@
 package com.example.frikartas.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -19,6 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.frikartas.R
 import com.example.frikartas.domain.models.Collection
+import com.example.frikartas.ui.theme.BlueBottomAppBAr
+import com.example.frikartas.ui.theme.BluePers
 
 
 @Composable
@@ -27,23 +31,28 @@ fun CollectionDetailView(collection: Collection, onItemClick: (String, Int) -> U
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
-        Text(text = "${collection.name}",
-            color = Color.White,
-            fontWeight = FontWeight.Bold,
-            fontSize = 24.sp,
-            fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
-            )
-        Text(text = "${collection.publicationYear}",
-            color = Color.White,
-            fontWeight = FontWeight.Bold,
-            fontFamily = FontFamily(Font(R.font.krusyidascripttwo)),
+        BorderedText(
+            text = "${collection.name}",
+            textColor = Color.Black,
+            borderColor = Color.White,
+            borderWidth = 2,
+            textSize = 24
+        )
+        BorderedText(
+            text = "${collection.publicationYear}",
+            textColor = Color.Black,
+            borderColor = Color.White,
+            borderWidth = 1,
+            textSize = 16
         )
         Divider()
-        Text(text = "Cartas en la colección:",
-            color = Color.White,
-            fontWeight = FontWeight.SemiBold,
-            fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
-            )
+        BorderedText(
+            text = "Cartas en la colección:",
+            textColor = BlueBottomAppBAr,
+            borderColor = Color.White,
+            borderWidth = 1,
+            textSize = 20
+        )
         Divider()
 
         LazyColumn {
@@ -53,5 +62,59 @@ fun CollectionDetailView(collection: Collection, onItemClick: (String, Int) -> U
                 })
             }
         }
+    }
+}
+
+@Composable
+fun BorderedText(
+    text: String,
+    textColor: Color,
+    borderColor: Color,
+    borderWidth: Int,
+    textSize: Int
+) {
+    Box(modifier = Modifier.padding(borderWidth.dp)) {
+        // Dibujar sombras alrededor del texto
+        Text(
+            text = text,
+            color = borderColor,
+            fontWeight = FontWeight.Bold,
+            fontSize = textSize.sp,
+            fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
+            modifier = Modifier.offset((-borderWidth).dp, (-borderWidth).dp)
+        )
+        Text(
+            text = text,
+            color = borderColor,
+            fontWeight = FontWeight.Bold,
+            fontSize = textSize.sp,
+            fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
+            modifier = Modifier.offset((-borderWidth).dp, borderWidth.dp)
+        )
+        Text(
+            text = text,
+            color = borderColor,
+            fontWeight = FontWeight.Bold,
+            fontSize = textSize.sp,
+            fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
+            modifier = Modifier.offset(borderWidth.dp, (-borderWidth).dp)
+        )
+        Text(
+            text = text,
+            color = borderColor,
+            fontWeight = FontWeight.Bold,
+            fontSize = textSize.sp,
+            fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
+            modifier = Modifier.offset(borderWidth.dp, borderWidth.dp)
+        )
+
+        // Dibujar el texto principal encima
+        Text(
+            text = text,
+            color = textColor,
+            fontWeight = FontWeight.Bold,
+            fontSize = textSize.sp,
+            fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
+        )
     }
 }

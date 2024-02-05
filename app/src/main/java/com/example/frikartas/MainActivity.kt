@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -44,6 +45,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
+import androidx.compose.material3.NavigationDrawerItemColors
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -71,6 +73,7 @@ import com.example.frikartas.ui.screens.CardDetailScreen
 import com.example.frikartas.ui.screens.CardListScreen
 import com.example.frikartas.ui.screens.CollectionListScreen
 import com.example.frikartas.ui.theme.BlueBottomAppBAr
+import com.example.frikartas.ui.theme.BlueDrawer
 import com.example.frikartas.ui.theme.BlueTopAppBAr
 import com.example.frikartas.ui.theme.FrikartasTheme
 import com.example.frikartas.ui.viewmodels.CardViewModel
@@ -187,44 +190,59 @@ val drawerItems = listOf(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DrawerContent(drawerItems: List<DrawerItem>, drawerState: DrawerState, scope: CoroutineScope, navController: NavHostController) {
+fun DrawerContent(drawerItems: List<DrawerItem>, drawerState: DrawerState, scope: CoroutineScope, navController: NavHostController,
+                  drawerBackgroundColor: Color = BlueDrawer) {
     var selectedItemIndex by rememberSaveable { mutableStateOf(0) }
     val contextForToast = LocalContext.current
 
-    ModalDrawerSheet {
-        drawerItems.forEachIndexed { index, item ->
-            NavigationDrawerItem(
-                label = { Text(item.title) },
-                selected = index == selectedItemIndex,
-                onClick = {
-                    selectedItemIndex = index
-                    scope.launch { drawerState.close() }
+    ModalDrawerSheet (modifier = Modifier
+        .background(drawerBackgroundColor)){
 
-                    if (index == 0) {  // Si el ítem seleccionado es el primero, navega a la pantalla principal
-                        navController.navigate("mainScreen") {
-                            // Esto asegura que al volver a la pantalla principal no puedas volver a la pantalla anterior presionando el botón de atrás
-                            popUpTo(navController.graph.startDestinationId)
-                            launchSingleTop = true
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(drawerBackgroundColor)
+        ) {
+            drawerItems.forEachIndexed { index, item ->
+                NavigationDrawerItem(
+                    label = { Text(item.title, color = Color.Black) },
+                    selected = index == selectedItemIndex,
+                    onClick = {
+                        selectedItemIndex = index
+                        scope.launch { drawerState.close() }
+
+                        if (index == 0) {
+                            navController.navigate("mainScreen") {
+                                popUpTo(navController.graph.startDestinationId)
+                                launchSingleTop = true
+                            }
                         }
-                    }
 
-                    Toast.makeText(contextForToast, "${item.title} clicked", Toast.LENGTH_SHORT).show()
-                },
-                icon = {
-                    Icon(
-                        imageVector = if (index == selectedItemIndex) item.selectedIcon else item.unselectedIcon,
-                        contentDescription = item.title
-                    )
-                },
-                // Lógica para la badge
-            )
+                        Toast.makeText(contextForToast, "${item.title} clicked", Toast.LENGTH_SHORT).show()
+                    },
+                    icon = {
+                        Icon(
+                            imageVector = if (index == selectedItemIndex) item.selectedIcon else item.unselectedIcon,
+                            contentDescription = item.title,
+                            tint = Color.Black
+                        )
+                    },
+                    modifier = Modifier.background(drawerBackgroundColor),  // Fondo de los items
+                )
+            }
+
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(drawerBackgroundColor)  // Fondo del contenedor del logo
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.logoepictransp),
+                    contentDescription = "Logo Frikartas",
+                    modifier = Modifier.size(500.dp)
+                )
+            }
         }
-
-        Image(
-            painter = painterResource(id =R.drawable.frikartaslogo),
-            contentDescription = "Logo Frikartas",
-            Modifier.size(500.dp))
-
     }
 }
 

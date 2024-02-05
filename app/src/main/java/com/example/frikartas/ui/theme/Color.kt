@@ -1,5 +1,6 @@
 package com.example.frikartas.ui.theme
 
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -13,5 +14,9 @@ val Pink40 = Color(0xFF7D5260)
 val BluePers = Color(0xFF4763FF)
 val Discount = Color(0xFFFF5722)
 
+
 val BlueTopAppBAr = Color(0xFF29315E)
 val BlueBottomAppBAr = Color(0xFF374179)
+val BlueDrawer = Color(0xFF3C6D7C)
+
+val gradientBrushBlue = Brush.verticalGradient(listOf(BlueTopAppBAr, BlueBottomAppBAr))

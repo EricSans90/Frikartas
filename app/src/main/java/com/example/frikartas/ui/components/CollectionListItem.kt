@@ -41,7 +41,7 @@ fun CollectionListItem(collection: Collection, onItemClick: () -> Unit) {
             Text(text = collection.name,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
-                fontSize = 24.sp,
+                fontSize = 30.sp,
                 fontFamily = FontFamily(Font(R.font.krusyidascriptone)),
             )
             Text(text = "Año de publicación: ${collection.publicationYear}",
