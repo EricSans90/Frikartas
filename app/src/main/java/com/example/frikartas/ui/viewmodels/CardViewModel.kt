@@ -1,5 +1,6 @@
 package com.example.frikartas.ui.viewmodels
 
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -96,4 +97,17 @@ class CardViewModel @Inject constructor(private val repository: CardRepository) 
         }
         return null  // Devuelve null si no hay cartas con descuento
     }
+
+    // Mapa para manejar el estado de favoritos temporalmente
+    var favoriteCards = mutableStateMapOf<Int, Boolean>()
+        private set
+
+    // Función para cambiar el estado de favorito de una carta
+    fun toggleFavorite(cardId: Int) {
+        val currentFavoriteStatus = favoriteCards[cardId] ?: false
+        favoriteCards[cardId] = !currentFavoriteStatus
+    }
+
+    // Función para verificar si una carta está marcada como favorita
+    fun isCardFavorite(cardId: Int) = favoriteCards[cardId] ?: false
 }

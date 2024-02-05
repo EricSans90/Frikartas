@@ -2,6 +2,11 @@ package com.example.frikartas.ui.components
 
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,6 +23,8 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -44,17 +51,24 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.frikartas.R
 import com.example.frikartas.domain.models.Card
 import com.example.frikartas.ui.theme.BluePers
+import com.example.frikartas.ui.theme.BlueTopAppBAr
 import com.example.frikartas.ui.theme.Discount
 
 @Composable
-fun CardDetailView(card: Card) {
+fun CardDetailView(card: Card,
+                   isFavorite: Boolean,
+                   onFavoriteChange: (Boolean) -> Unit,
+                   onItemClick: (String, Int) -> Unit
+) {
     // Estado para alternar entre imágenes
     var imageIndex by rememberSaveable { mutableStateOf(0) }
+    var detailsVisible by rememberSaveable { mutableStateOf(false) }
     val scrollState = rememberScrollState()
 
 
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .verticalScroll(scrollState),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -74,14 +88,25 @@ fun CardDetailView(card: Card) {
         // Espacio entre imagen y texto
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Nombre de la carta
-        Text(
-            text = card.name,
-            style = MaterialTheme.typography.headlineLarge,
-            fontWeight = FontWeight.Bold,
-            fontFamily = FontFamily(Font(R.font.onepiecefont)),
-            color = Color.White
-        )
+        Row(horizontalArrangement = Arrangement.SpaceBetween){
+            // Nombre de la carta
+            Text(
+                text = card.name,
+                style = MaterialTheme.typography.headlineLarge,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily(Font(R.font.onepiecefont)),
+                color = Color.White
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            //icono favorito animado
+            //Cuando haga el proyecto de final de grado esta info la pasaré a la BD
+            // o haré algo con ella de moemnto sirve para ver la animación
+            FavoriteCardIcon(
+                isFavorite = isFavorite,
+                onFavoriteChange = onFavoriteChange
+            )
+        }
+
 
         // Rareza de la carta
         Row(){
@@ -132,68 +157,86 @@ fun CardDetailView(card: Card) {
                 )
             }
         }
+        // Detalles de la carta
+        CardDetailsVisibility(visible = detailsVisible, card = card)
 
-        // Descripción de la carta + tamaño + lenguajes
-        if (card.description.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(8.dp))
-            Column(horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center){
-                Row(){
-                    Text(
-                        text = "Description: ",
-                        fontWeight = FontWeight.Bold,
-                        color = BluePers,
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                    Text(
-                        text = "${card.description}.",
-                        color = Color.White,
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                }
-                Row(){
-                    Text(
-                        text = "Size: ",
-                        fontWeight = FontWeight.Bold,
-                        color = BluePers,
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                    Text(
-                        text = "${card.size}.",
-                        color = Color.White,
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                }
-                Row(){
-                    Text(
-                        text = "Languages: ",
-                        fontWeight = FontWeight.Bold,
-                        color = BluePers,
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                    Text(
-                        text = "${card.languages.joinToString(", ") { it.displayName }}",
-                        color = Color.White,
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                }
-            }
+
+        Button(
+            colors = ButtonDefaults.buttonColors(containerColor = BlueTopAppBAr),
+            onClick = { detailsVisible = !detailsVisible },
+            modifier = Modifier.padding(16.dp),
+
+        ) {
+            Text(text = if (detailsVisible) "Hide Details" else "Show Details")
         }
 
 
-        // Información del SKU privada para el admin
-        /*Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = "SKU: ${card.SKU}",
-                style = MaterialTheme.typography.bodySmall
-            )
-        }*/
     }
-
-    
 }
+
+
+@Composable
+fun CardDetailsVisibility(visible: Boolean, card: Card) {
+    // Define la animación de visibilidad
+    val enterTransition = fadeIn() + expandVertically()
+    val exitTransition = fadeOut() + shrinkVertically()
+
+    AnimatedVisibility(
+        visible = visible,
+        enter = enterTransition,
+        exit = exitTransition
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            // Descripción de la carta + tamaño + lenguajes
+            if (card.description.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                Column(horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center){
+                    Row(){
+                        Text(
+                            text = "Description: ",
+                            fontWeight = FontWeight.Bold,
+                            color = BluePers,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Text(
+                            text = "${card.description}.",
+                            color = Color.White,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                    Row(){
+                        Text(
+                            text = "Size: ",
+                            fontWeight = FontWeight.Bold,
+                            color = BluePers,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Text(
+                            text = "${card.size}.",
+                            color = Color.White,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                    Row(){
+                        Text(
+                            text = "Languages: ",
+                            fontWeight = FontWeight.Bold,
+                            color = BluePers,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Text(
+                            text = "${card.languages.joinToString(", ") { it.displayName }}",
+                            color = Color.White,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 @Composable
 fun StockInfo(card: Card) {

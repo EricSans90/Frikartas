@@ -1,0 +1,38 @@
+package com.example.frikartas.ui.components
+
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.Star
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
+
+//Animación
+@Composable
+fun FavoriteCardIcon(isFavorite: Boolean, onFavoriteChange: (Boolean) -> Unit) {
+    val scale: Float by animateFloatAsState(
+        targetValue = if (isFavorite) 1.5f else 1f,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessLow
+        )
+    )
+
+    IconButton(onClick = { onFavoriteChange(!isFavorite) }) {
+        Icon(
+            imageVector = if (isFavorite) Icons.Outlined.Favorite else Icons.Outlined.Favorite,
+            contentDescription = "Favorite",
+            modifier = Modifier.scale(scale), // Animación de escala
+            tint = if (isFavorite) Color.Red else Color.Black
+        )
+    }
+}

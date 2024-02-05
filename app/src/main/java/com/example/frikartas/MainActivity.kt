@@ -1,5 +1,7 @@
 package com.example.frikartas
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -16,7 +18,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.ArrowBack
@@ -28,9 +29,6 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material.icons.twotone.AccountBox
-import androidx.compose.material.icons.twotone.Star
-import androidx.compose.material3.AlertDialogDefaults.containerColor
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
@@ -45,7 +43,6 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
-import androidx.compose.material3.NavigationDrawerItemColors
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -83,6 +80,7 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    private val cardViewModel: CardViewModel by viewModels()
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,7 +89,6 @@ class MainActivity : ComponentActivity() {
                 val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
                 val scope = rememberCoroutineScope()
                 val navController = rememberNavController()
-                val cardViewModel: CardViewModel by viewModels()
 
 
                 ModalNavigationDrawer(
@@ -181,7 +178,7 @@ val drawerItems = listOf(
         unselectedIcon = Icons.Outlined.Settings,
     ),
     DrawerItem(
-        title = "Old project",
+        title = "Apertura App",
         selectedIcon = Icons.Filled.Info,
         unselectedIcon = Icons.Outlined.Info,
     ),
@@ -190,10 +187,15 @@ val drawerItems = listOf(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DrawerContent(drawerItems: List<DrawerItem>, drawerState: DrawerState, scope: CoroutineScope, navController: NavHostController,
-                  drawerBackgroundColor: Color = BlueDrawer) {
+fun DrawerContent(
+    drawerItems: List<DrawerItem>,
+    drawerState: DrawerState,
+    scope: CoroutineScope,
+    navController: NavHostController,
+    drawerBackgroundColor: Color = BlueDrawer
+) {
     var selectedItemIndex by rememberSaveable { mutableStateOf(0) }
-    val contextForToast = LocalContext.current
+    val context = LocalContext.current
 
     ModalDrawerSheet (modifier = Modifier
         .background(drawerBackgroundColor)){
@@ -216,9 +218,13 @@ fun DrawerContent(drawerItems: List<DrawerItem>, drawerState: DrawerState, scope
                                 popUpTo(navController.graph.startDestinationId)
                                 launchSingleTop = true
                             }
+                        } else if (index == 2){
+                            // Crear el Intent para abrir un navegador
+                            val openURLIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"))
+                            context.startActivity(openURLIntent)
                         }
 
-                        Toast.makeText(contextForToast, "${item.title} clicked", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "${item.title} clicked", Toast.LENGTH_SHORT).show()
                     },
                     icon = {
                         Icon(
